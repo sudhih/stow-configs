@@ -4,7 +4,7 @@ local o=vim.opt
 -- about opened files
 o.backup = False				-- Don't create backup file
 o.swapfile = false				-- do not  create swap file
-o.clipboard = "unnamedplus"		-- allow nvim to access system clipboard
+o.clipboard = "unnamed"		-- allow nvim to access system clipboard
 o.fileencoding = "utf-8"		-- encoding written to file
 o.undofile = true				-- enable persistent undo
 
