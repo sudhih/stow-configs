@@ -30,8 +30,8 @@ local options = {
 
     -- about typing
     expandtab = true,                       -- convert tabs to spaces
-    shiftwidth = 4,                         -- the number of spaces inserted for each indentation
-    tabstop = 4,                            -- insert 4 spaces for each tab
+    shiftwidth = 2,                         -- the number of spaces inserted for each indentation
+    tabstop = 2,                            -- insert 4 spaces for each tab
     smartcase = true,                       -- smart case
     smartindent = true,                     -- make indenting smarter again
     timeoutlen = 1000,                      -- time to wait for a mapped sequence to complete (in milliseconds)
