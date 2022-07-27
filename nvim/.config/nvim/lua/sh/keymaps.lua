@@ -25,8 +25,8 @@ vim.g. mapleader = ","
   keymap("n", "C-Right", ":vertical resize +2<CR>", opts)
 
   -- navigate buffers
-  keymap("n", "<S-l>", ":bnext<CR>", opts)
-  keymap("n", "<S-h>", ":bprevious<CR>", opts)
+  keymap("n", "<S-k>", ":bnext<CR>", opts)
+  keymap("n", "<S-j>", ":bprevious<CR>", opts)
 
 -- INSERT mode
   -- move to NORMAL mode

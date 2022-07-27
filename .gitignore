@@ -1,0 +1,2 @@
+# files to be ignored from stow-configs project
+nvim/.config/nvim/plugin
