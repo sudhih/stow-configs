@@ -17,31 +17,31 @@ end
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-  Text = "",
-  Method = "m",
-  Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
-  Interface = "",
-  Module = "",
-  Property = "",
-  Unit = "",
-  Value = "",
-  Enum = "",
-  Keyword = "",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "",
-  Event = "",
-  Operator = "",
-  TypeParameter = "",
+  Text = " Text",
+  Method = "m Method",
+  Function = " Function",
+  Constructor = " Constructor",
+  Field = " Field",
+  Variable = " Variable",
+  Class = " Class",
+  Interface = " Interface",
+  Module = " Module",
+  Property = " Property",
+  Unit = " Unit",
+  Value = " Value",
+  Enum = " Enum",
+  Keyword = " Keyword",
+  Snippet = " Snippet",
+  Color = " Color",
+  File = " File",
+  Reference = " Reference",
+  Folder = " Folder",
+  EnumMember = " EnumMember",
+  Constant = " Constant",
+  Struct = "  Struct",
+  Event = " Event",
+  Operator = " Operator",
+  TypeParameter = " TypeParameter",
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
@@ -51,6 +51,7 @@ cmp.setup {
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
+
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -95,7 +96,7 @@ cmp.setup {
     }),
   },
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
@@ -115,7 +116,7 @@ cmp.setup {
     { name  = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
-    { name = "path" },
+    { name = "path", keyword_length = 3 },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
@@ -123,15 +124,11 @@ cmp.setup {
   },
   window = {
     -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    completion = cmp.config.window.bordered(),
+    --completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
   experimental = {
     ghost_text = false,
     native_menu = false,
   },
-  -- number of keyword required to trigger auto-completion
-  -- completion = {
-  --   keyword_length = 1
-  -- }, 
 }
