@@ -1,4 +1,4 @@
-local options = { 
+local options = {
     -- about opened files
     backup = false,                         -- creates a backup file
     swapfile = false,                       -- don't create swap files
