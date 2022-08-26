@@ -6,7 +6,7 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- leader key
-vim.g. mapleader = ","
+vim.g.mapleader = ","
 
 -- NORMAL mode --
   -- Better window navigation
@@ -24,13 +24,15 @@ vim.g. mapleader = ","
   keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
   keymap("n", "C-Right", ":vertical resize +2<CR>", opts)
 
-  -- navigate buffers
-  keymap("n", "<S-k>", ":bnext<CR>", opts)
-  keymap("n", "<S-j>", ":bprevious<CR>", opts)
+-- navigate buffers
+-- TODO: install tpope's "unimpaired" package
+  -- keymap("n", "<S-k>", ":bnext<CR>", opts)
+  -- keymap("n", "<S-j>", ":bprevious<CR>", opts)
 
--- INSERT mode
+  -- INSERT mode
   -- move to NORMAL mode
   keymap("i", "fj", "<ESC>", opts)
+  keymap("v", "fj", "<ESC>", opts)
 
 -- VISUAL mode
   -- stay in indent mode
@@ -45,17 +47,18 @@ vim.g. mapleader = ","
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+  keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+  keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+  keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+  keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+  keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+  keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+  keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+  keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+-- Telescope plugin's keymaps
+  keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+  keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
