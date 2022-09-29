@@ -1,4 +1,5 @@
 -- example configuration from https://github.com/folke/tokyonight.nvim#%EF%B8%8F-configuration
+-- other possible values for 'tokyonight_style' is day, night & storm
 vim.g.tokyonight_style = "storm"
 vim.g.tokyonight_italic_style = true
 vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
