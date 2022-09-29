@@ -79,6 +79,18 @@ return packer.startup(function(use)
     -- Treesitter plugin's extension
     use "p00f/nvim-ts-rainbow"
 
+    -- tpope's work
+    use "tpope/vim-repeat"
+    use "tpope/vim-surround"
+    use "tpope/vim-unimpaired"
+
+    -- distraction free writing & reading in vim
+    use "junegunn/goyo.vim"
+
+
+    -- stackmap, plugin  development from scratch
+    -- use '/home/sudhir/git-repos/plugins/stackmap.nvim'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end ofter all plugins
     if PACKER_BOOTSTRAP then
