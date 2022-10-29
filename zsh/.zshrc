@@ -5,6 +5,7 @@ PS1="%K{yellow}%n%k@%m:%~/ > "
 PS2="> "
 RPS1="%(?..(%?%))"
 
+export ZSH_THEME=spaceship
 # export HISTSIZE=~/.zsh_history
 setopt INTERACTIVE_COMMENTS       # Allow in-line comments in interactive mode
 setopt PROMPT_SUBST               # subject prompt string, first to, parameter expansion, cmd substitution & arithmatic expansion
