@@ -16,3 +16,7 @@ if [ -d $HOME/git-repos/zk ]; then
   export PATH=$PATH:$HOME/git-repos/zk
 fi
 
+if [ -d $HOME/onedrive/zk_trial ]; then
+  # default 'notebook' for zk command
+  export ZK_NOTEBOOK_DIR=$HOME/onedrive/zk_trial/
+fi
