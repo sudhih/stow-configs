@@ -45,10 +45,6 @@ local options = {
     -- termiguicolors = true,                   -- set term gui colors (most terminals support this)
 }
 
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
---vim.cmd [[set formatoptions-=cro]]
-
 vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
     vim.opt[k] = v
