@@ -30,3 +30,8 @@ fi
 if [ -d $HOME/git-repos/exa/target/release ]; then
   export PATH=$PATH:$HOME/git-repos/exa/target/release
 fi
+
+if [ -d $HOME/.cargo ]; then
+  # 'rustup' shell setup, required to run rust
+  source $HOME/.cargo/env
+fi
