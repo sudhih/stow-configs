@@ -1,0 +1,16 @@
+-- TODO: write code that installs 'packer.nvim' automatically 
+require('base')
+require('mappings')
+require('plugins')
+require('p-mason')
+require('p-lsp')
+require('p-tree')
+require('color')
+require('text')
+require('p-lualine')
+require('p-telescope')
+require('p-bookmark')
+require('p-lspkind')
+require('p-cmp')
+
+vim.keymap.set({ 'n', 'i', 'v' }, 'fj', '<esc>', { silent = true })
