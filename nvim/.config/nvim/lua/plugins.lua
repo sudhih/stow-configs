@@ -15,8 +15,10 @@ return require('packer').startup(function(use)
     tag = 'nightly'
   }
 
+  -- colorschemes
   use 'sainnhe/everforest'
   use 'folke/tokyonight.nvim'
+  use 'glepnir/porcelain.nvim'
 
   use 'rmagatti/alternate-toggler'
   use 'windwp/nvim-autopairs'
@@ -24,9 +26,17 @@ return require('packer').startup(function(use)
   use 'gcmt/wildfire.vim'
   use 'tpope/vim-surround'
 
+  --[[
+      use {
+          'nvim-lualine/lualine.nvim',
+          requires = { 'kyazdani532/nvim-web-devicons', opt = true }
+      }
+      ]]
+  --
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani532/nvim-web-devicons', opt = true }
+    'glepnir/whiskyline.nvim',
+    requires = { { 'glepnir/gitsigns.nvim' } },
+    --   branch = 'patch_2'
   }
 
   use {
@@ -46,4 +56,7 @@ return require('packer').startup(function(use)
 
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+
+  -- zettelkasten
+  use 'mickael-menu/zk-nvim'
 end)
