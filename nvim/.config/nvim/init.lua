@@ -1,4 +1,5 @@
 -- TODO: write code that installs 'packer.nvim' automatically
+require('globals')
 require('base')
 require('mappings')
 require('plugins')
@@ -19,5 +20,7 @@ require('p-lspkind')
 require('p-cmp')
 require('p-zknvim')
 
+-- vim.cmd([[packadd  '~/git-repos/plugins/cyclist.vim']])
+-- <Cmd>exe Plug "~/git-repos/plugins/cyclist.vim"<cr>
 
 vim.keymap.set({ 'n', 'i', 'v' }, 'fj', '<esc>', { silent = true })

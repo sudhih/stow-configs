@@ -59,4 +59,7 @@ return require('packer').startup(function(use)
 
   -- zettelkasten
   use 'mickael-menu/zk-nvim'
+
+  -- automatically highlight other uses of word under the cursor
+  use 'RRethy/vim-illuminate'
 end)
