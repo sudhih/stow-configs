@@ -8,7 +8,7 @@ require('p-lsp')
 require('p-tree')
 require('color')
 require('text')
-require('p-lualine')
+-- require('p-lualine')
 --
 -- TODO: when whiskyline status works, move this to a separate file
 require('gitsigns').setup()
