@@ -20,7 +20,21 @@ alias ....='cd ../../../'
 
 alias mkdir='mkdir -pv'
 
-# npm & node executables essentials for nvim-lsp
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Aliases for switching nvim configuration
+alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart.nvim nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+function nvims() {
+  configs=("lazyvim" "kickstart.nvim" "LunarVim" "default")
+  selected=$(printf "%s\n" "${configs[@]}" | fzf --prompt="  Neovim Config  " --height=50% --layout=reverse --border --exit-0)
+  if [[ -z $selected ]]; then
+    echo "Nothing Selected"
+    return 0
+  elif [[ $selected == "default" ]]; then
+    $selected=""
+  fi
+  NVIM_APPNAME=$selected nvim $@
+}
+
+bindkey -s ^q "nvims\n"
