@@ -1,2 +1,4 @@
 # files to be ignored from stow-configs project
+
+# ignore 'packer' compiled file
 nvim/.config/nvim/plugin
