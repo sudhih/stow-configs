@@ -18,7 +18,10 @@ return require('packer').startup(function(use)
   -- colorschemes
   use 'sainnhe/everforest'
   use 'folke/tokyonight.nvim'
-  use 'glepnir/porcelain.nvim'
+  use {
+    'glepnir/porcelain.nvim',
+    -- requires = { 'glepnir/gitsigns' }
+  }
 
   use 'rmagatti/alternate-toggler'
   use 'windwp/nvim-autopairs'
@@ -35,7 +38,7 @@ return require('packer').startup(function(use)
   --
   use {
     'glepnir/whiskyline.nvim',
-    requires = { { 'glepnir/gitsigns.nvim' } },
+    --  requires = { { 'glepnir/gitsigns.nvim' } },
     --   branch = 'patch_2'
   }
 

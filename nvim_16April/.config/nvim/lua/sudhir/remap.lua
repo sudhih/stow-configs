@@ -1,4 +1,11 @@
--- define a mapleader vim.g.mapleader = ',' open default file browser vim.keymap.set("n", "<space>e", vim.cmd.Ex) quickly jump to NORMAL mode insert mode
+-- define a mapleader
+vim.g.mapleader = ','
+
+-- open default file browser
+vim.keymap.set("n", "<space>e", vim.cmd.Ex)
+
+-- quickly jump to NORMAL mode
+-- insert mode
 vim.keymap.set("i", "fj", "<ESC>")
 vim.keymap.set("i", "<leader>e", "<ESC>")
 vim.keymap.set("i", "<leader>w", "<ESC>:w<cr>")
