@@ -1,10 +1,10 @@
 local builtin = require("telescope.builtin")
 local keymap = vim.keymap.set
 
-keymap('n', '<leader>ff', builtin.find_files, {})
-keymap('n', '<leader>fg', builtin.live_grep, {})
-keymap('n', '<leader>fb', builtin.buffers, {})
-keymap('n', '<leader>fh', builtin.help_tags, {})
+keymap('n', '<space>f', builtin.find_files, {})
+keymap('n', '<space>g', builtin.live_grep, {})
+keymap('n', '<space>b', builtin.buffers, {})
+keymap('n', '<space>h', builtin.help_tags, {})
 
 require('nvim-web-devicons').setup({
   override = {},
