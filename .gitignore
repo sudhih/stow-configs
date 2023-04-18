@@ -1,7 +1,5 @@
 # files to be ignored from stow-configs project
 
 # ignore 'packer' compiled file
-nvim/.config/nvim/plugin
+*/.config/nvim/plugin/
 
-# ignore zsh compiled files
-*.zwc
