@@ -2,3 +2,6 @@
 
 # ignore 'packer' compiled file
 nvim/.config/nvim/plugin
+
+# ignore zsh compiled files
+*.zwc
