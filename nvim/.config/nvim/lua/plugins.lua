@@ -29,19 +29,18 @@ return require('packer').startup(function(use)
   use 'gcmt/wildfire.vim'
   use 'tpope/vim-surround'
 
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani532/nvim-web-devicons', opt = true }
+  }
+
   --[[
-      use {
-          'nvim-lualine/lualine.nvim',
-          requires = { 'kyazdani532/nvim-web-devicons', opt = true }
-      }
-      ]]
-  --
   use {
     'glepnir/whiskyline.nvim',
     --  requires = { { 'glepnir/gitsigns.nvim' } },
     --   branch = 'patch_2'
   }
-
+  --]]
   use {
     'nvim-telescope/telescope.nvim',
     requires = { { 'nvim-lua/plenary.nvim' } }
