@@ -12,7 +12,9 @@ return require('packer').startup(function(use)
     requires = {
       'nvim-tree/nvim-web-devicons',
     },
-    tag = 'nightly'
+    tag = 'nightly',
+    -- TODO:  we don't want this plugin to load at initialization
+    keys = [[<space>e]],
   }
 
   -- colorschemes
@@ -64,4 +66,10 @@ return require('packer').startup(function(use)
 
   -- automatically highlight other uses of word under the cursor
   use 'RRethy/vim-illuminate'
+
+  -- TODO: get rid of this plugin after you tune the startup
+  use {
+    'dstein64/vim-startuptime',
+    cmd = 'StartupTime',
+  }
 end)

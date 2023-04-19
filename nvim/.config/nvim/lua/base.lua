@@ -19,7 +19,6 @@ opt.hlsearch = true
 opt.incsearch = true
 
 opt.mouse = 'a'
--- opt.clipboard:append('unnamedplus')
 
 opt.tabstop = 2
 opt.softtabstop = 2
@@ -43,3 +42,41 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     })
   end
 })
+
+-- Apparently when `set clipboard=unnamedplus` $VIMRUNTIME/autload/provider/clipboard.vim script will be sourced see below
+-- https://github.com/neovim/neovim/issues/9570#issuecomment-459725522
+-- This script will tries to lookup system clipboard by calling `system()` which is slow.
+-- Hence set clipboard executables exclusively, which is obvious, to overcome slowness. Read here:
+-- https://www.reddit.com/r/neovim/comments/ab01n8/improve_neovim_startup_by_60ms_for_free_on_macos/
+if vim.fn.has('wsl') == 1 then
+ vim.cmd [[
+    let g:clipboard = {
+        \   'name': 'WslClipboard',
+        \   'copy': {
+        \      '+': 'clip.exe',
+        \      '*': 'clip.exe',
+        \    },
+        \   'paste': {
+        \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        \   },
+        \   'cache_enabled': 0,
+        \ }
+  ]]
+elseif vim.fn.has('mac') == 1 then
+  vim.cmd [[
+    let g:clipboard = {
+        \ 'name': 'pbcopy',
+        \ 'copy': {
+        \    '+': 'pbcopy',
+        \    '*': 'pbcopy',
+        \  },
+        \ 'paste': {
+        \    '+': 'pbpaste',
+        \    '*': 'pbpaste',
+        \ },
+        \ 'cache_enabled': 0,
+        \ }
+  ]]
+end
+opt.clipboard:append('unnamedplus')
