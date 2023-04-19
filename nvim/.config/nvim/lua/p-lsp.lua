@@ -29,6 +29,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 
   -- format on save
+  --[[
   vim.api.nvim_create_autocmd('BufWritePre', {
     group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
     buffer = bufnr,
@@ -36,6 +37,7 @@ local on_attach = function(_, bufnr)
       vim.lsp.buf.format()
     end
   })
+--]]
 end
 
 --[[
