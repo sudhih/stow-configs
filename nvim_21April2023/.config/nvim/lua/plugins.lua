@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+
+  use 'j-hui/fidget.nvim'
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {

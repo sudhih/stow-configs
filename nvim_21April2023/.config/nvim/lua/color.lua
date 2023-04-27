@@ -1,7 +1,9 @@
-vim.g.verforest_diagnostic_line_highlight = 1
+vim.g.everforest_diagnostic_line_highlight = 1
 vim.cmd('colorscheme everforest')
 --vim.cmd('colorscheme porcelain')
 
+-- we're setting this in module/lsp.lua
+--[[
 vim.fn.sign_define({
   {
     name = 'DiagnosticSignError',
@@ -29,3 +31,5 @@ vim.fn.sign_define({
     linehl = 'HintLine',
   }
 })
+
+--]]
