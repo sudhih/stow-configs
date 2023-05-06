@@ -10,3 +10,4 @@ else
 fi
 
 alias mkdir='mkdir -pv'
+alias s='print "Sourcing $HOME/.zshrc" && source $HOME/.zshrc'

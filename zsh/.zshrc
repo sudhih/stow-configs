@@ -15,9 +15,9 @@ plug "romkatv/powerlevel10k"
 setopt INTERACTIVE_COMMENTS       # Allow in-line comments in interactive mode
 setopt PROMPT_SUBST               # subject prompt string, first to, parameter expansion, cmd substitution & arithmatic expansion
 
-# Default Editor
-export EDITOR="nvim"
-export MANWIDTH=79
+# zsh-autosuggestions settings
+bindkey '^ ' autosuggest-accept
+bindkey '^j' autosuggest-execute
 
 source /home/sudhir/stow-configs/zsh/history-setup.zsh
 source /home/sudhir/stow-configs/zsh/aliases.zsh
