@@ -17,6 +17,7 @@ setopt PROMPT_SUBST               # subject prompt string, first to, parameter e
 
 # Default Editor
 export EDITOR="nvim"
+export MANWIDTH=79
 
 source /home/sudhir/stow-configs/zsh/history-setup.zsh
 source /home/sudhir/stow-configs/zsh/aliases.zsh
@@ -38,11 +39,7 @@ function nvims() {
   NVIM_APPNAME=$selected nvim $@
 }
 
-bindkey -s ^q "nvims\n"
-
-# Prompt from starship
-# Install it from here: https://starship.rs/#quick-install
-# eval "$(starship init zsh)"
+# bindkey -s ^q "nvims\n"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
