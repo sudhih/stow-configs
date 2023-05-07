@@ -26,9 +26,10 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  vim.keymap.set('n', '<space>ft', function() vim.lsp.buf.format { async = true } end, bufopts)
 
   -- format on save
+  --[[
   vim.api.nvim_create_autocmd('BufWritePre', {
     group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
     buffer = bufnr,
@@ -36,6 +37,7 @@ local on_attach = function(_, bufnr)
       vim.lsp.buf.format()
     end
   })
+--]]
 end
 
 --[[

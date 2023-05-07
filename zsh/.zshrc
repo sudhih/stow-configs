@@ -1,24 +1,26 @@
-autoload -U promptinit  # load prompt system 'promptinit'
-promptinit              # invoke & initialize the module
-# prompt bart
-PS1="%K{yellow}%n%k@%m:%~/ > "
-PS2="> "
-RPS1="%(?..(%?%))"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-export ZSH_THEME=spaceship
-# export HISTSIZE=~/.zsh_history
+# we use `zap` as zsh plugin manager
+# https://github.com/zap-zsh/zap
+source /home/sudhir/.local/share/zap/zap.zsh
+plug "zap-zsh/supercharge"
+plug "zap-users/zsh-autosuggestions"
+plug "romkatv/powerlevel10k"
+
 setopt INTERACTIVE_COMMENTS       # Allow in-line comments in interactive mode
 setopt PROMPT_SUBST               # subject prompt string, first to, parameter expansion, cmd substitution & arithmatic expansion
 
-# Aliases
-alias ls='ls --color=auto -F'
-alias la='ls -a'
-alias ll='ls -l'
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
+# zsh-autosuggestions settings
+bindkey '^ ' autosuggest-accept
+bindkey '^j' autosuggest-execute
 
-alias mkdir='mkdir -pv'
+source /home/sudhir/stow-configs/zsh/history-setup.zsh
+source /home/sudhir/stow-configs/zsh/aliases.zsh
 
 # Aliases for switching nvim configuration
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
@@ -37,4 +39,12 @@ function nvims() {
   NVIM_APPNAME=$selected nvim $@
 }
 
-bindkey -s ^q "nvims\n"
+# bindkey -s ^q "nvims\n"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH=$HOME/.local/bin/:$PATH
+eval "$(zoxide init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

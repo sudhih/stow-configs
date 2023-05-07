@@ -36,7 +36,14 @@ if [ -d $HOME/.cargo ]; then
   source $HOME/.cargo/env
 fi
 
+if [ -d $HOME/onedrive/vault/taskwarrior/data ]; then
+  export TASKRC=$HOME/onedrive/vault/taskwarrior/taskrc
+  export TASKDATA=$HOME/onedrive/vault/taskwarrior/data
+fi
+
 # Load `pyenv` automatically
 export PYENV_ROOT="$HOME/.pyenv/"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export PATH="$PATH:/c/mnt/System32"
