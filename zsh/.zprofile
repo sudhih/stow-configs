@@ -36,7 +36,7 @@ if [ -d $HOME/.cargo ]; then
   source $HOME/.cargo/env
 fi
 
-if [ -d $HOME/onedrive/vault/taskwarrior/taskrc ]; then
+if [ -d $HOME/onedrive/vault/taskwarrior/data ]; then
   export TASKRC=$HOME/onedrive/vault/taskwarrior/taskrc
   export TASKDATA=$HOME/onedrive/vault/taskwarrior/data
 fi
