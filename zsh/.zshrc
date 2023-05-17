@@ -7,7 +7,9 @@ fi
 
 # we use `zap` as zsh plugin manager
 # https://github.com/zap-zsh/zap
-source /home/sudhir/.local/share/zap/zap.zsh
+# TODO: enclose this within WSL or Macbook condition
+source $HOME/.local/share/zap/zap.zsh
+
 plug "zap-zsh/supercharge"
 plug "zap-users/zsh-autosuggestions"
 plug "romkatv/powerlevel10k"
@@ -19,8 +21,10 @@ setopt PROMPT_SUBST               # subject prompt string, first to, parameter e
 bindkey '^ ' autosuggest-accept
 bindkey '^j' autosuggest-execute
 
-source /home/sudhir/stow-configs/zsh/history-setup.zsh
-source /home/sudhir/stow-configs/zsh/aliases.zsh
+# TODO:
+# enclose this in switch-case/if-else to handle both mac-book & WSL 
+source $HOME/stow-configs/zsh/history-setup.zsh
+source $HOME/stow-configs/zsh/aliases.zsh
 
 # Aliases for switching nvim configuration
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
