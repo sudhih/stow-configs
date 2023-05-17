@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# cd into the directory
+z $1
+# get the name of dir you cd'd into
+base_name=$(basename $PWD)
+# rename current window in the current session
+tmux rename-window "$base_name"

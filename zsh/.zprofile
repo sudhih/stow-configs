@@ -48,4 +48,6 @@ if hash pyenv 2>/dev/null; then
 	eval "$(pyenv init -)"
 fi
 
-export PATH="$PATH:/c/mnt/System32"
+export PATH="$PATH:$HOME/stow-configs/bin/.local/scripts"
+#  thank you @theprimagen
+bindkey -s ^f "tmux-sessionizer\n"
