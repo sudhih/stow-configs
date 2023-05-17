@@ -46,4 +46,6 @@ export PYENV_ROOT="$HOME/.pyenv/"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH="$PATH:/c/mnt/System32"
+export PATH="$PATH:$HOME/stow-configs/bin/.local/scripts"
+#  thank you @theprimagen
+bindkey -s ^f "tmux-sessionizer\n"
