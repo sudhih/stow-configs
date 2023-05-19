@@ -13,8 +13,9 @@ alias mkdir='mkdir -pv'
 alias s='print "Sourcing $HOME/.zshrc" && source $HOME/.zshrc'
 
 # Git
+alias ga='git add'
 alias gs='git status'
 alias gd='git diff'
 alias gc='git commit'
-alias gpush='git push'
-alias gpl='git pull'
+alias gp='git push'
+alias gl='git pull'
