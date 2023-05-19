@@ -18,8 +18,8 @@ setopt INTERACTIVE_COMMENTS       # Allow in-line comments in interactive mode
 setopt PROMPT_SUBST               # subject prompt string, first to, parameter expansion, cmd substitution & arithmatic expansion
 
 # zsh-autosuggestions settings
-bindkey '^ ' autosuggest-accept
-bindkey '^j' autosuggest-execute
+bindkey '^j' autosuggest-accept
+bindkey '^k' autosuggest-execute
 
 # TODO:
 # enclose this in switch-case/if-else to handle both mac-book & WSL 

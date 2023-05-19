@@ -1,21 +1,31 @@
 # History setup
 
 # Save command history in this file
-export HISTFILE="$HOME/.zsh_history"
+export hist_file="$HOME/.zsh_history"
 
 # Max number of lines to be saved in history file
-export SAVEHIST=10000
+export save_hist=10000
 
 # Number of lines to read from $HISTFILE at the start of interactive session
-export HISTSIZE=$SAVEHIST
+export hist_size=$SAVEHIST
 
-# Do not save history line if it matches previous one
-setopt HIST_IGNORE_DUPS
-setopt HIST_SAVE_NO_DUPS
+# don't record an event that was just recorded again
+setopt hist_ignore_dups
+
+# expire duplicate event first when trimming history
+# when, writing to history file, at the end of session probably?
+setopt hist_expire_dups_first
+
+# don't record write duplicate even to the history file
+setopt hist_save_no_dups
+
 # don't store `history` or `fc` commands
-setopt HIST_NO_STORE
-# ignore commands that start with space. Use this technique if you intentionally want to ignore
-# certain commands from saving into history
-setopt HIST_IGNORE_SPACE
-# -------------------
+setopt hist_no_store
 
+# ignore commands that start with space. 
+# Use this technique if you intentionally want to ignore
+# certain commands from saving into history
+setopt hist_ignore_space
+
+# share history between all sessions
+setopt share_history
