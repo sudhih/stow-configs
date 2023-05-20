@@ -1,3 +1,5 @@
+local os_name=$(uname -s)
+
 if hash nvim 2>/dev/null; then
   export EDITOR=nvim
 
@@ -22,9 +24,21 @@ if [ -d $HOME/git-repos/zk ]; then
   export PATH=$PATH:$HOME/git-repos/zk
 fi
 
-if [ -d $HOME/onedrive/zk-trial ]; then
-  # default 'notebook' for zk command
-  export ZK_NOTEBOOK_DIR=$HOME/onedrive/zk-trial/
+if [[ "$os_name" == "Darwin" ]]; then
+  export ZK_NOTEBOOK_DIR="$HOME/git-repos/zk-notes"
+  export TASKRC="$HOME/git-repos/my-tasks/taskrc"
+  export TASKDATA="$HOME/git-repos/my-tasks/data"
+elif [[ "$os_name" == "Linux" ]]; then
+  if grep --ignore-case --quiet microsoft /proc/version; then
+    if [ -d $HOME/onedrive/zk-trial ]; then
+      # default 'notebook' for zk command
+      export ZK_NOTEBOOK_DIR=$HOME/onedrive/zk-trial/
+    fi
+    if [ -d $HOME/onedrive/vault/taskwarrior/data ]; then
+      export TASKRC=$HOME/onedrive/vault/taskwarrior/taskrc
+      export TASKDATA=$HOME/onedrive/vault/taskwarrior/data
+    fi
+  fi
 fi
 
 if [ -d $HOME/git-repos/exa/target/release ]; then
@@ -34,11 +48,6 @@ fi
 if [ -d $HOME/.cargo ]; then
   # 'rustup' shell setup, required to run rust
   source $HOME/.cargo/env
-fi
-
-if [ -d $HOME/onedrive/vault/taskwarrior/data ]; then
-  export TASKRC=$HOME/onedrive/vault/taskwarrior/taskrc
-  export TASKDATA=$HOME/onedrive/vault/taskwarrior/data
 fi
 
 # Load `pyenv` automatically
