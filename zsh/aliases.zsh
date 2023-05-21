@@ -21,3 +21,9 @@ alias gp='git push'
 alias gl='git pull'
 alias gr='git restore'
 alias grs='git restore --staged'
+alias lg='lazygit'
+
+# https://www.youtube.com/shorts/K1FxGIG_lcA
+# thank you @elijahmanor
+alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+
