@@ -25,5 +25,5 @@ alias lg='lazygit'
 
 # https://www.youtube.com/shorts/K1FxGIG_lcA
 # thank you @elijahmanor
-alias v='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
+alias e='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
 

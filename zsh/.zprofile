@@ -59,4 +59,4 @@ fi
 
 export PATH="$PATH:$HOME/stow-configs/bin/.local/scripts"
 #  thank you @theprimagen
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s '^f' "tmux-sessionizer\r"
