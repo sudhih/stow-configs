@@ -1,12 +1,11 @@
-# zk configuration file
-#
-# Uncomment the properties you want to customize.
+# zk global configuration file
 
-# NOTE SETTINGS
-#
+[notebook]
+# Dir where zk notes live 
+dir = "~/git-repos/zk-notes"
+
 # Defines the default options used when generating new notes.
 [note]
-
 # Language used when writing notes.
 # This is used to generate slugs or with date formats.
 language = "en"
@@ -52,9 +51,7 @@ id-case = "lower"
 # A dictionary of variables you can use for any custom values when generating
 # new notes. They are accessible in templates with {{extra.<key>}}
 [extra]
-
-#key = "value"
-
+author = "Sudhir Hanumanthappa"
 
 # GROUP OVERRIDES
 #
@@ -81,6 +78,21 @@ paths = ["journal/daily"]
 filename = "{{format-date now '%Y-%m-%d'}}"
 extension = "md"
 template = "daily.md"
+
+[group.python]
+# IMP: These directories are relative to zk's notebook dir 
+# before using them, make sure to create these dirs 
+paths = ["journal/python", "tmp/python"]
+[group.python.note]
+filename = "{{id}}"
+id-charset = "alphanum"
+id-length = 8
+id-case = "mixed"
+extension = "py"
+template = "python-template.py"
+[group.python.extra]
+author = "Sudhir Hanumanthappa "
+note = "The skeleton of this file is generated from zk, using configured 'python' group"
 
 # MARKDOWN SETTINGS
 [format.markdown]
