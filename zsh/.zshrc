@@ -17,14 +17,11 @@ plug "romkatv/powerlevel10k"
 setopt INTERACTIVE_COMMENTS       # Allow in-line comments in interactive mode
 setopt PROMPT_SUBST               # subject prompt string, first to, parameter expansion, cmd substitution & arithmatic expansion
 
-# zsh-autosuggestions settings
-bindkey '^j' autosuggest-accept
-bindkey '^k' autosuggest-execute
-
 # TODO:
 # enclose this in switch-case/if-else to handle both mac-book & WSL 
 source $HOME/stow-configs/zsh/history-setup.zsh
 source $HOME/stow-configs/zsh/aliases.zsh
+source $HOME/stow-configs/zsh/key-bindings.zsh
 
 # Aliases for switching nvim configuration
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
