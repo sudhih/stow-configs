@@ -91,7 +91,7 @@ id-case = "mixed"
 extension = "py"
 template = "python-template.py"
 [group.python.extra]
-author = "Sudhir Hanumanthappa"
+author = "Sudhir Hanumanthappa "
 note = "The skeleton of this file is generated from zk, using configured 'python' group"
 
 # MARKDOWN SETTINGS
