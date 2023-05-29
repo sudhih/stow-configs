@@ -1,8 +1,8 @@
 if hash exa 2>/dev/null; then
   alias ls='exa --grid --icons --group-directories-first --sort=name'
   alias ll='exa --long --icons --group-directories-first --sort=name'
-  alias la='exa --long --all --group-directories-first'
-  alias lt='exa --tree --long --level=2 --sort=name '
+  alias la='exa --long --all --group-directories-first --ignore-glob .git --git-ignore'
+  alias lt='exa --tree --long --level=2 --sort=name --all --git-ignore --ignore-glob .git'
 else
   alias ls='ls -F --group-directories-first --color=auto'
   alias ll='ls -l --group-directories-first --color=auto'
@@ -23,7 +23,10 @@ alias gr='git restore'
 alias grs='git restore --staged'
 alias lg='lazygit'
 
+# tmux 
+alias ta='tmux attach'
+
+# Thank you @elijahmanor
 # https://www.youtube.com/shorts/K1FxGIG_lcA
-# thank you @elijahmanor
 alias e='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
 
