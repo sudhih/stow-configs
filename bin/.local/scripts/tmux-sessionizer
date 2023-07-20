@@ -7,10 +7,8 @@ folders=(
 	$(find ~/git-repos/usr -maxdepth 1 -type d)
 )
 
-# office WSL
-if [ -d ~/onedrive/zk-trial/ ]; then
-	folders+=(~/onedrive/zk-trial/)
-fi
+# b'se in office its in Onedrive & in my Mac at different place
+folders+=($ZK_NOTEBOOK_DIR)
 
 if [ -d ~/stow-configs/ ]; then
 	folders+=(~/stow-configs)
