@@ -1,13 +1,27 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # This script is a copied from @theprimeagen's repo
 # https://github.com/ThePrimeagen/.dotfiles/tree/master/bin/.local/scripts/tmux-sessionizer
+
+folders=(
+	$(find ~/git-repos/usr -maxdepth 1 -type d)
+)
+
+# office WSL
+if [ -d ~/onedrive/zk-trial/ ]; then
+	folders+=(~/onedrive/zk-trial/)
+fi
+
+if [ -d ~/stow-configs/ ]; then
+	folders+=(~/stow-configs)
+fi
+
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ~/stow-configs/ ~/git-repos/ ~/git-repos/usr/ -mindepth 1 -maxdepth 1 -type d | fzf-tmux -p --reverse)
+	# selected=$(find ~/stow-configs/ ~/git-repos/ ~/git-repos/usr/ -mindepth 1 -maxdepth 1 -type d | fzf-tmux -p --reverse)
+	selected=$(printf "%s\n" "${folders[@]}" | fzf-tmux -p --reverse)
 fi
-
 if [[ -z $selected ]]; then
 	exit 0
 fi
