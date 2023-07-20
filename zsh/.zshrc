@@ -26,10 +26,10 @@ source $HOME/stow-configs/zsh/key-bindings.zsh
 # Aliases for switching nvim configuration
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
 alias nvim-kick="NVIM_APPNAME=kickstart.nvim nvim"
-alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+alias nvim-my-nvim="NVIM_APPNAME=my-nvim nvim"
 
 function nvims() {
-  configs=("lazyvim" "kickstart.nvim" "LunarVim" "default")
+  configs=("lazyvim" "kickstart.nvim" "my-nvim" "default")
   selected=$(printf "%s\n" "${configs[@]}" | fzf --prompt="  Neovim Config  " --height=50% --layout=reverse --border --exit-0)
   if [[ -z $selected ]]; then
     echo "Nothing Selected"

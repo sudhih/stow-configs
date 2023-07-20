@@ -16,6 +16,10 @@ if [ -d ~/stow-configs/ ]; then
 	folders+=(~/stow-configs)
 fi
 
+if [ -d ~/git-repos/my-nvim/ ]; then
+  folders+=(~/git-repos/my-nvim/)
+fi
+
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
