@@ -5,6 +5,7 @@ if hash nvim 2>/dev/null; then
 
   # use nvim as manpager ':h Man'
   export MANPAGER='nvim +Man!'
+  export MANWIDTH=79
 else 
   export EDITOR=vim
 fi

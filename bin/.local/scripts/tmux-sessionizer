@@ -10,6 +10,10 @@ folders=(
 # b'se in office its in Onedrive & in my Mac at different place
 folders+=($ZK_NOTEBOOK_DIR)
 
+if [ -d ~/dev/AI_Core_Services/ ]; then
+  folders+=(~/dev/AI_Core_Services)
+fi
+
 if [ -d ~/stow-configs/ ]; then
 	folders+=(~/stow-configs)
 fi
