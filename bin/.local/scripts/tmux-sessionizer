@@ -22,6 +22,10 @@ if [ -d ~/git-repos/my-lazyvim/ ]; then
   folders+=(~/git-repos/my-lazyvim/)
 fi
 
+if [ -d $HOME ]; then
+  folders+=($HOME)
+fi
+
 if [ -d ~/git-repos/my-nvim/ ]; then
   folders+=(~/git-repos/my-nvim/)
 fi

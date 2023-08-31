@@ -39,3 +39,6 @@ alias ta='tmux attach'
 # https://www.youtube.com/shorts/K1FxGIG_lcA
 alias e='fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim'
 
+
+# nnn alias
+alias n="nnn"

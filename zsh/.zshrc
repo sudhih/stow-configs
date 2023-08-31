@@ -22,6 +22,7 @@ setopt PROMPT_SUBST               # subject prompt string, first to, parameter e
 source $HOME/stow-configs/zsh/history-setup.zsh
 source $HOME/stow-configs/zsh/aliases.zsh
 source $HOME/stow-configs/zsh/key-bindings.zsh
+source $HOME/stow-configs/zsh/nnn.zsh
 
 # Aliases for switching nvim configuration
 alias nvim-lazy="NVIM_APPNAME=lazyvim nvim"
