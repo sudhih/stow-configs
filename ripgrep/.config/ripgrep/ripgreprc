@@ -1,0 +1,8 @@
+# Search hidden files / directories by default
+--hidden
+
+--smart-case
+
+# files that i want to ignore globally when file/folder is not git repo
+--ignore-file=$XDG_CONFIG_HOME/ripgrep/ignore-files
+

@@ -1,4 +1,5 @@
 local os_name=$(uname -s)
+export XDG_CONFIG_HOME=$HOME/.config
 
 if hash nvim 2>/dev/null; then
   export EDITOR=nvim
@@ -50,6 +51,11 @@ if [ -d $HOME/.cargo ]; then
   # 'rustup' shell setup, required to run rust
   source $HOME/.cargo/env
 fi
+
+# `ripgrep` configuration
+# if [ -f $XDG_CONFIG_HOME/ripgrep/ripgreprc ]; then
+#   export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/ripgreprc
+# fi
 
 # Load `pyenv` automatically
 if hash pyenv 2>/dev/null; then
