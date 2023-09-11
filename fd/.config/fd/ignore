@@ -1,0 +1,8 @@
+__pycache__/
+file_encryptor/
+offline_packages/
+*dist-info/
+bin/
+# this is comment line
+!ai_core/
+site-packages/

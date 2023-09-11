@@ -12,11 +12,11 @@ fi
 # Fix: 'fd' which is an alternate to 'find' cmd
 # after installing its executable will be named as 'fdfind' in 
 # Ubuntu distribution. 
-if ! type -p fd 2>/dev/null; then
-  if type -p fdfind 2>/dev/null; then
-    alias fd='fdfind'
-  fi
-fi
+# if ! type -p fd 2>/dev/null; then
+#   if type -p fdfind 2>/dev/null; then
+#     alias fd='fdfind'
+#   fi
+# fi
 
 alias mkdir='mkdir -pv'
 alias s='print "Sourcing $HOME/.zshrc" && source $HOME/.zshrc'
