@@ -40,6 +40,9 @@ elif [[ "$os_name" == "Linux" ]]; then
       export TASKRC=$HOME/onedrive/vault/taskwarrior/taskrc
       export TASKDATA=$HOME/onedrive/vault/taskwarrior/data
     fi
+    if [ -d /home/sudhir/.nvm/versions/node/v16.16.0/bin ]; then
+      export PATH=$PATH/home/sudhir/.nvm/versions/node/v16.16.0/bin
+    fi
   fi
 fi
 
