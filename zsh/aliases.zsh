@@ -31,6 +31,7 @@ alias gl='git pull'
 alias gr='git restore'
 alias grs='git restore --staged'
 alias lg='lazygit'
+alias gb='git branch'
 
 # tmux 
 alias ta='tmux attach'
