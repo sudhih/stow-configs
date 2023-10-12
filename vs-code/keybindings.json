@@ -1,0 +1,21 @@
+// Place your key bindings in this file to override the defaults
+[
+
+    // {
+    //     "key": "oem_comma q",
+    //     "command": "workbench.action.closeActiveEditor"
+    // },
+    // {
+    //     "key": "ctrl+f4",
+    //     "command": "-workbench.action.closeActiveEditor"
+    // },
+    // {
+    //     // open Recent + Workspace files
+    //     "key": ", ,",
+    //     "command": "workbench.action.quickOpen"
+    // },
+    // {
+    //     "key": "ctrl+p",
+    //     "command": "-workbench.action.quickOpen"
+    // }
+]

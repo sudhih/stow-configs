@@ -1,0 +1,108 @@
+{
+    // This is a comment
+    "workbench.colorTheme": "Dracula",
+    "workbench.startupEditor": "none",
+    "editor.lineNumbers": "relative",
+    // "editor.renderLineHighlight": "all",
+    // "editor.renderLineHighlightOnlyWhenFocus": ,
+    "editor.foldingStrategy": "auto",
+
+    // show document map on left
+    "editor.minimap.enabled": false,
+
+    // Wrap lines at column 79
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn":79,
+
+    // "editor.fontFamily": "CaskaydiaCove NFM",
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontSize": 12,
+
+
+    "notebook.output.wordWrap": true,
+    "workbench.settings.editor": "json",
+    "terminal.integrated.fontSize": 12,
+    //"terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
+
+// ---------------------------------------------------------------
+// Extension `Rainbow CSV` settings
+// {{
+    // Using the light mode
+    "indentRainbow.indicatorStyle": "light",
+    // we use a simple 1 pixel wide line
+    //"indentRainbow.lightIndicatorStyleLineWidth": 1,
+    // the same colors as above but more visible
+    "indentRainbow.colors": [
+      "rgba(243,144,188)",
+      "rgba(184, 224, 82)",
+      "rgba(90, 151, 206)",
+      "rgba(255, 205, 42)"
+    ],
+// }}
+// ---------------------------------------------------------------
+
+// ---------------------------------------------------------------
+// Extension `Pylance` settings
+// {{
+      "python.analysis.inlayHints.functionReturnTypes":true,
+      "python.analysis.inlayHints.callArgumentNames": "all",
+      "python.analysis.inlayHints.variableTypes": true,
+      "python.analysis.inlayHints.pytestParameters": true,
+// }}
+// ---------------------------------------------------------------
+
+// ---------------------------------------------------------------
+// Extension `VSCodeVim` settings
+// {
+"vim.easymotion": true,
+"vim.leader": ",",
+"vim.incsearch": true,
+"vim.useSystemClipboard": true,
+"vim.useCtrlKeys": true,
+"vim.hlsearch": true,
+"vim.highlightedyank.enable": true,
+"vim.highlightedyank.color": "rgba(255, 122, 66, 0.9)",
+"vim.insertModeKeyBindings": [
+  {
+    "before": ["f", "j"],
+    "after": ["<ESC>", ":nohl"]
+  },
+],
+"vim.visualModeKeyBindings": [
+  {
+    "before": ["f", "j"],
+    "after": ["<ESC>"],
+  }
+],
+"vim.normalModeKeyBindings": [
+  {
+  "before": [":"],
+  "commands": ["workbench.action.showCommands"],
+  },
+  {
+  "before": ["f", "j"],
+  "after": ["<ESC>"],
+  },
+  {
+  "before": ["<leader>", "f", "f"],
+  // "after": [""],
+  "commands": ["workbench.action.quickOpen"]
+  // "silent": true, // comment this line if you want to have commands shown
+  }
+  {
+  "before": ["<leader>", "c"],
+  // "after": [""],
+  "commands": ["workbench.action.closeActiveEditor"],
+  "silent": true, // comment this line if you want to have commands shown
+  }
+],
+"vim.handleKeys": {
+  // Delegate these keys to be handled by VSCode instead of VSCodeVim
+  // "<C-d>": true,
+  "<C-s>": false,
+  // "<C-R>": false, // open recent
+  // "<C-z>": false
+},
+// }
+// ---------------------------------------------------------------
+}
