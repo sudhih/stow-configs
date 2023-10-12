@@ -1,6 +1,6 @@
 # my VS code setup. 
 
-> IMP: `keybindings.json`, `settings.json` & `tasks.json` file needs to be placed in `%AppData%\Code\User` on Windows machine
+> IMP: `User` folder needs to be placed in `%AppData%\Code\` on Windows machine
 Needs few extensions(listed below) installed to work. 
 - Dracula Official - colorscheme
 - indent-rainbow for indent colors
