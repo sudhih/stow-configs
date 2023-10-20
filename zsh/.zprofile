@@ -27,7 +27,7 @@ if [ -d $HOME/git-repos/zk ]; then
 fi
 
 if [[ "$os_name" == "Darwin" ]]; then
-  export ZK_NOTEBOOK_DIR="$HOME/git-repos/zk-notes"
+  export ZK_NOTEBOOK_DIR="$HOME/git-repos/usr/sudhih/zk-notes"
   export TASKRC="$HOME/git-repos/my-tasks/taskrc"
   export TASKDATA="$HOME/git-repos/my-tasks/data"
 elif [[ "$os_name" == "Linux" ]]; then
@@ -61,10 +61,10 @@ fi
 # fi
 
 # Load `pyenv` automatically
-if hash pyenv 2>/dev/null; then
-	export PYENV_ROOT="$HOME/.pyenv/"
-	command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-	eval "$(pyenv init -)"
-fi
+# if hash pyenv 2>/dev/null; then
+export PYENV_ROOT="$HOME/.pyenv/"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# 	eval "$(pyenv init -)"
+# fi
 
 
