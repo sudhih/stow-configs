@@ -60,11 +60,13 @@ fi
 #   export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/ripgreprc
 # fi
 
-# Load `pyenv` automatically
-# if hash pyenv 2>/dev/null; then
-export PYENV_ROOT="$HOME/.pyenv/"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-# fi
+# `pyenv` setup
+if [ -d $HOME/.pyenv ]; then
+  export PYENV_ROOT="$HOME/.pyenv/"
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  # IMP: this is required, to make switched python version is effective
+  # the moment you switch using `pyenv global <version>`
+  eval "$(pyenv init -)"
+fi
 
 
