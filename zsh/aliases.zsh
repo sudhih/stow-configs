@@ -1,8 +1,10 @@
 if hash exa 2>/dev/null; then
   alias ls='exa --grid --icons --group-directories-first --sort=name'
   alias ll='exa --long --icons --group-directories-first --sort=name'
-  alias la='exa --long --all --group-directories-first --ignore-glob .git --git-ignore'
-  alias lt='exa --tree --long --level=2 --sort=name --all --git-ignore --ignore-glob .git'
+  alias la='exa --long --all --group-directories-first --ignore-glob .git'
+  alias lt='exa --tree --level=2 --sort=name --ignore-glob .git'
+  alias ltl='exa --tree --long --level=2 --sort=name --ignore-glob .git'
+  alias lta='exa --tree --long --level=2 --sort=name --all --ignore-glob .git'
 else
   alias ls='ls -F --group-directories-first --color=auto'
   alias ll='ls -l --group-directories-first --color=auto'
