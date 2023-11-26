@@ -17,7 +17,7 @@
 		"prefix": "ext-setting",
 		"body": [
 			"// ---------------------------------------------------------------",
-			"// Extension `$1` settings",
+			"// Extension `${1:Extension-name}` settings",
 			"// {",
 			"$2",
 			"// }",

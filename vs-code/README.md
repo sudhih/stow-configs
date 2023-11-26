@@ -1,7 +1,8 @@
 # my VS code setup. 
 
-> IMP: `User` folder needs to be placed in `%AppData%\Code\` on Windows machine
-Needs few extensions(listed below) installed to work. 
+> IMP: Content of `User` folder needs to be `copied` to `%AppData%\Code\User\` folder in Windows machine.</br>
+
+> This configuration **requires** below plugins installed, to work.
 - Dracula Official - colorscheme
 - indent-rainbow for indent colors
 - Ruff 

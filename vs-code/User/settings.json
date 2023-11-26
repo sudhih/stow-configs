@@ -1,6 +1,6 @@
 {
     // This is a comment
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Visual Studio Light",
     "workbench.startupEditor": "none",
     "editor.lineNumbers": "relative",
     // "editor.renderLineHighlight": "all",
@@ -16,7 +16,7 @@
 
     // "editor.fontFamily": "CaskaydiaCove NFM",
     "editor.fontFamily": "FiraCode Nerd Font Mono",
-    "editor.fontSize": 12,
+    "editor.fontSize": 13,
 
 
     "notebook.output.wordWrap": true,
@@ -88,7 +88,7 @@
   // "after": [""],
   "commands": ["workbench.action.quickOpen"]
   // "silent": true, // comment this line if you want to have commands shown
-  }
+  },
   {
   "before": ["<leader>", "c"],
   // "after": [""],
@@ -103,6 +103,12 @@
   // "<C-R>": false, // open recent
   // "<C-z>": false
 },
+// "tabnine.cloudHost": "https://aehtabnine.accenture.com",
+// "tabnine.experimentalAutoImports": true,
+// "security.allowedUNCHosts": [
+//   "wsl.localhost"
+// ],
+// "workbench.activityBar.location": "top",
 // }
 // ---------------------------------------------------------------
 }
