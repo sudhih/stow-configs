@@ -1,0 +1,9 @@
+{
+	"Checkbox":{
+		"prefix": "check",
+		"body": [
+			"<input type=checkbox><label>$1</label></br>\n"
+		],
+		"description": "Checkbox",
+	}
+}

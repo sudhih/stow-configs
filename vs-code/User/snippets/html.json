@@ -1,0 +1,74 @@
+{
+    "FAQ HTML":{
+    "prefix": [ "qna-html", "faq-html"],
+    "body": [
+        "<!DOCTYPE html>\n\
+<html lang=\"en\">\n\
+<head>\n\
+  <meta charset=\"UTF-8\">\n\
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
+  <style>\n\
+    .faq {\n\
+      border: 1px solid #ccc;\n\
+      margin-bottom: 10px;\n\
+      border-radius: 5px;\n\
+    }\n\
+\n\
+    .faq-header {\n\
+      background-color: #f0f0f0;\n\
+      padding: 10px;\n\
+      cursor: pointer;\n\
+    }\n\
+\n\
+    .faq-content {\n\
+      display: none;\n\
+      padding: 10px;\n\
+    }\n\
+\n\
+    .completed-checkbox {\n\
+      margin-top: 5px;\n\
+    }\n\
+  </style>\n\
+  <title>Collapsible FAQ with Checkbox</title>\n\
+</head>\n\
+<body>\n\
+\n\
+  <!-- QnA starts from here.-->\n\
+  $1\n\
+\n\
+  <script>\n\
+    function toggleFAQ(faqId) {\n\
+      var faqContent = document.getElementById(faqId);\n\
+      if (faqContent.style.display === \"block\") {\n\
+        faqContent.style.display = \"none\";\n\
+      } else {\n\
+        faqContent.style.display = \"block\";\n\
+      }\n\
+    }\n\
+  </script>\n\
+\n\
+</body>\n\
+</html>"
+    ],
+    "description": "QnA for programming exercises",
+    // "isFileTemplate": true,
+    },
+    "QnA <div>":{
+        "prefix": ["qna-div",]
+        "body": [
+            "\
+<div class=\"faq\">\n\
+    <div class=\"faq-header\" onclick=\"toggleFAQ('faq${1:question-number}')\">\n\
+    \t\t${2:question-number}. ${3:question-text}\n\
+    </div>\n\
+    <div class=\"faq-content\" id=\"faq${4:question-number}\">\n\
+        <p><code>\n\
+        \t${5:question-answer}\n\
+        </code></p>\n\
+        <input type=\"checkbox\" class=\"completed-checkbox\"> Mark as completed\n\
+    </div>\n\
+</div>\n\n"
+        ],
+        "description": "QnA <div>",
+    }
+}

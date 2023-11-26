@@ -1,6 +1,6 @@
 {
     // This is a comment
-    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.colorTheme": "Dracula",
     "workbench.startupEditor": "none",
     "editor.lineNumbers": "relative",
     // "editor.renderLineHighlight": "all",
