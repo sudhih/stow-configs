@@ -62,22 +62,52 @@
 "vim.hlsearch": true,
 "vim.highlightedyank.enable": true,
 "vim.highlightedyank.color": "rgba(255, 122, 66, 0.9)",
+
+// INSERT mode
 "vim.insertModeKeyBindings": [
   {
     "before": ["f", "j"],
-    "after": ["<ESC>", ":nohl"]
+    "after": ["<ESC>", ":nohl"],
+  },
+  {
+    "before": ["<leader>", "w"],
+    "after": ["<ESC>"],
+    "commands": ["workbench.action.files.save"],
+    "silent": true, // comment this line if you want to have commands shown
   },
 ],
+
+// VISUAL mode
 "vim.visualModeKeyBindings": [
   {
     "before": ["f", "j"],
     "after": ["<ESC>"],
-  }
-],
-"vim.normalModeKeyBindings": [
+  },
   {
-  "before": [":"],
-  "commands": ["workbench.action.showCommands"],
+    "before": ["<leader>", "w"],
+    "after": ["<ESC>"],
+    "commands": ["workbench.action.files.save"],
+    "silent": true, // comment this line if you want to have commands shown
+  },
+],
+
+// NORMAL mode
+"vim.normalModeKeyBindings": [
+  // {
+  // "before": [":"],
+  // "commands": ["workbench.action.showCommands"],
+  // },
+  {
+    "before": ["<leader>", "w"],
+    "after": ["<ESC>"],
+    "commands": ["workbench.action.files.save"],
+    "silent": true, // comment this line if you want to have commands shown 
+  }, 
+  {
+    "before": ["K"],
+    "after": ["lineBreakInsert"],
+    // "commands": [""]
+    "silent": true, // comment this line if you want to have commands shown
   },
   {
   "before": ["f", "j"],
@@ -100,15 +130,25 @@
   // Delegate these keys to be handled by VSCode instead of VSCodeVim
   // "<C-d>": true,
   "<C-s>": false,
-  // "<C-R>": false, // open recent
+  // "<C-R>": false, // odfapen recent
   // "<C-z>": false
 },
-// "tabnine.cloudHost": "https://aehtabnine.accenture.com",
-// "tabnine.experimentalAutoImports": true,
-// "security.allowedUNCHosts": [
-//   "wsl.localhost"
-// ],
-// "workbench.activityBar.location": "top",
-// }
+"tabnine.cloudHost": "https://aehtabnine.accenture.com",
+"tabnine.experimentalAutoImports": true,
+"security.allowedUNCHosts": [
+  "wsl.localhost"
+],
+"workbench.activityBar.location": "top",
+"[python]": {
+  "editor.defaultFormatter": "ms-python.black-formatter"
+},
+// }}
+// ---------------------------------------------------------------
+
+// ---------------------------------------------------------------
+// Jupyter Notebook Settings
+// {{
+"notebook.lineNumbers": "on",
+// }}
 // ---------------------------------------------------------------
 }

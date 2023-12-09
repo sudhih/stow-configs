@@ -32,7 +32,7 @@
 			"	\"after\": [\"$2\"],",
 			"	// \"commands\": [\"$3\"]"
 			"	\"silent\": true, // comment this line if you want to have commands shown"
-			"}"
+			"},"
 		]
 	}
 }
