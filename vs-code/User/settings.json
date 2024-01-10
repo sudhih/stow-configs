@@ -124,7 +124,19 @@
   // "after": [""],
   "commands": ["workbench.action.closeActiveEditor"],
   "silent": true, // comment this line if you want to have commands shown
-  }
+  },
+  {
+    "before": [""],
+    "after": [""],
+    // "commands": [""]
+    "silent": true, // comment this line if you want to have commands shown
+  },
+  // leader-e to open explorer
+  // leader-git to open git
+  // leader-o to outline
+  // leader-g to open grep
+  // :: to show all commands
+  // remap Ctrl + Tab
 ],
 "vim.handleKeys": {
   // Delegate these keys to be handled by VSCode instead of VSCodeVim

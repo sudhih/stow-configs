@@ -5,5 +5,12 @@
 			"<input type=checkbox><label>$1</label></br>\n"
 		],
 		"description": "Checkbox",
+	},
+	"underline":{
+		"prefix": ["ul",]
+		"body": [
+			"<u>$1</u>"
+		],
+		"description": "Surround text with underline",
 	}
 }
