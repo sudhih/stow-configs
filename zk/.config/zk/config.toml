@@ -94,7 +94,15 @@ template = "python-template.py"
 author = "Sudhir Hanumanthappa "
 note = "The skeleton of this file is generated from zk, using configured 'python' group"
 
-# MARKDOWN SETTINGS
+[group.fleet]
+paths = ["fleet"]
+[group.fleet.note]
+filename = "{{format-date now 'timestamp'}}"
+template = "fleet.md"
+extension = "md"
+
+
+ # MARKDOWN SETTINGS
 [format.markdown]
 
 # Format used to generate links between notes.
