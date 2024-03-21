@@ -1,5 +1,6 @@
 local os_name=$(uname -s)
 export XDG_CONFIG_HOME=$HOME/.config
+export STOW_CONFIGS=$HOME/stow-configs
 
 if hash nvim 2>/dev/null; then
   export EDITOR=nvim

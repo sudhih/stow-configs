@@ -3,8 +3,8 @@
     "workbench.colorTheme": "Dracula",
     "workbench.startupEditor": "none",
     "editor.lineNumbers": "relative",
-    // "editor.renderLineHighlight": "all",
-    // "editor.renderLineHighlightOnlyWhenFocus": ,
+    "editor.renderLineHighlight": "all",
+    "editor.renderLineHighlightOnlyWhenFocus":false,
     "editor.foldingStrategy": "auto",
 
     // show document map on left
@@ -12,7 +12,7 @@
 
     // Wrap lines at column 79
     "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn":79,
+    // "editor.wordWrapColumn":79,
 
     // "editor.fontFamily": "CaskaydiaCove NFM",
     "editor.fontFamily": "FiraCode Nerd Font Mono",
@@ -44,10 +44,12 @@
 // ---------------------------------------------------------------
 // Extension `Pylance` settings
 // {{
-      "python.analysis.inlayHints.functionReturnTypes":true,
-      "python.analysis.inlayHints.callArgumentNames": "all",
-      "python.analysis.inlayHints.variableTypes": true,
-      "python.analysis.inlayHints.pytestParameters": true,
+      "python.analysis.inlayHints.functionReturnTypes":false,
+      // TODO: can I enable/disable inlayHints with a key mapping
+      // "python.analysis.inlayHints.callArgumentNames": "all",
+      "python.analysis.inlayHints.callArgumentNames": false,
+      "python.analysis.inlayHints.variableTypes": false,
+      "python.analysis.inlayHints.pytestParameters": false,
 // }}
 // ---------------------------------------------------------------
 
@@ -93,10 +95,10 @@
 
 // NORMAL mode
 "vim.normalModeKeyBindings": [
-  // {
-  // "before": [":"],
-  // "commands": ["workbench.action.showCommands"],
-  // },
+  {
+    "before": [":",":"],
+    "commands": ["workbench.action.showCommands"],
+  },
   {
     "before": ["<leader>", "w"],
     "after": ["<ESC>"],
@@ -110,25 +112,19 @@
     "silent": true, // comment this line if you want to have commands shown
   },
   {
-  "before": ["f", "j"],
-  "after": ["<ESC>"],
+    "before": ["f", "j"],
+    "after": ["<ESC>"],
   },
   {
-  "before": ["<leader>", "f", "f"],
-  // "after": [""],
-  "commands": ["workbench.action.quickOpen"]
-  // "silent": true, // comment this line if you want to have commands shown
+    "before": ["<leader>", "f", "f"],
+    // "after": [""],
+    "commands": ["workbench.action.quickOpen"]
+    // "silent": true, // comment this line if you want to have commands shown
   },
   {
-  "before": ["<leader>", "c"],
-  // "after": [""],
-  "commands": ["workbench.action.closeActiveEditor"],
-  "silent": true, // comment this line if you want to have commands shown
-  },
-  {
-    "before": [""],
-    "after": [""],
-    // "commands": [""]
+    "before": ["<leader>", "c"],
+    // "after": [""],
+    "commands": ["workbench.action.closeActiveEditor"],
     "silent": true, // comment this line if you want to have commands shown
   },
   // leader-e to open explorer
@@ -137,28 +133,63 @@
   // leader-g to open grep
   // :: to show all commands
   // remap Ctrl + Tab
+  // L to left of current buffer
+  {
+    "before": ["L"],
+    // "after": [":bnext"],
+    "commands": [":bnext"],
+    "silent": true, // comment this line if you want to have commands shown
+  },
+  {
+    "before": ["H"],
+    // "after": [":bprev"],
+    "commands": [":bprev"],
+    "silent": true, // comment this line if you want to have commands shown
+  },
+  {
+    "before": ["<leader>","e"],
+    "after": ["Ctrl", "e"],
+    // "commands": [""]
+    "silent": true, // comment this line if you want to have commands shown
+  }
+  {
+    "before": ["<leader>", "p", "u", "l", "l"],
+    // "after": [""],
+    "commands": [
+      {"command": "git.pull"},
+    ]
+    "silent": true, // comment this line if you want to have commands shown
+  },
+  // H to right of current buffer
 ],
+
 "vim.handleKeys": {
   // Delegate these keys to be handled by VSCode instead of VSCodeVim
   // "<C-d>": true,
   "<C-s>": false,
+  "<C-e>": false,
   // "<C-R>": false, // odfapen recent
   // "<C-z>": false
 },
-"tabnine.cloudHost": "https://aehtabnine.accenture.com",
-"tabnine.experimentalAutoImports": true,
+
+// To improve performance,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  }
+// ---------------------------------------------------------------
+
+// "tabnine.cloudHost": "https://aehtabnine.accenture.com",
+// "tabnine.experimentalAutoImports": true,
+
 "security.allowedUNCHosts": [
   "wsl.localhost"
 ],
-"workbench.activityBar.location": "top",
 "[python]": {
-  "editor.defaultFormatter": "ms-python.black-formatter"
+  "editor.defaultFormatter": "ms-python.black-formatter",
 },
-// }}
+"remote.autoForwardPortsSource": "hybrid",
 // ---------------------------------------------------------------
-
-// ---------------------------------------------------------------
-// Jupyter Notebook Settings
+// JupyterNotebook
 // {{
 "notebook.lineNumbers": "on",
 // }}
