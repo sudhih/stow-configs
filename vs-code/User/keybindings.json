@@ -1,21 +1,25 @@
-// Place your key bindings in this file to override the defaults
+// place your key bindings in this file to override the defaults
 [
+    // Enable or disable inlayHints for Python files
+    {
+        "key": "C-b",
+        "when": "editorTextFocus",
+        "args": {
+            "id": "toggleSidebar",
+            "value": [
+                {
+                    "workbench.action.toggleSidebarVisibility": true
+                },
+                {
+                    "workbench.action.toggleSidebarVisibility": false
+                },
+            ]
+        }
+    },
 
-    // {
-    //     "key": "oem_comma q",
-    //     "command": "workbench.action.closeActiveEditor"
-    // },
-    // {
-    //     "key": "ctrl+f4",
-    //     "command": "-workbench.action.closeActiveEditor"
-    // },
-    // {
-    //     // open Recent + Workspace files
-    //     "key": ", ,",
-    //     "command": "workbench.action.quickOpen"
-    // },
-    // {
-    //     "key": "ctrl+p",
-    //     "command": "-workbench.action.quickOpen"
-    // }
+    // Cycle through my preferred colorschemes
+    {
+        "key": "ctrl+shift+t",
+        "command": "settings.cycle.colorTheme",
+    }
 ]

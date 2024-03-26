@@ -1,197 +1,196 @@
 {
-    // This is a comment
-    "workbench.colorTheme": "Dracula",
-    "workbench.startupEditor": "none",
-    "editor.lineNumbers": "relative",
-    "editor.renderLineHighlight": "all",
-    "editor.renderLineHighlightOnlyWhenFocus":false,
-    "editor.foldingStrategy": "auto",
-
-    // show document map on left
-    "editor.minimap.enabled": false,
-
-    // Wrap lines at column 79
-    "editor.wordWrap": "bounded",
-    // "editor.wordWrapColumn":79,
-
-    // "editor.fontFamily": "CaskaydiaCove NFM",
-    "editor.fontFamily": "FiraCode Nerd Font Mono",
-    "editor.fontSize": 13,
-
-
-    "notebook.output.wordWrap": true,
-    "workbench.settings.editor": "json",
-    "terminal.integrated.fontSize": 12,
-    //"terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
-
-// ---------------------------------------------------------------
-// Extension `Rainbow CSV` settings
-// {{
-    // Using the light mode
-    "indentRainbow.indicatorStyle": "light",
-    // we use a simple 1 pixel wide line
-    //"indentRainbow.lightIndicatorStyleLineWidth": 1,
-    // the same colors as above but more visible
-    "indentRainbow.colors": [
-      "rgba(243,144,188)",
-      "rgba(184, 224, 82)",
-      "rgba(90, 151, 206)",
-      "rgba(255, 205, 42)"
-    ],
-// }}
-// ---------------------------------------------------------------
-
-// ---------------------------------------------------------------
-// Extension `Pylance` settings
-// {{
-      "python.analysis.inlayHints.functionReturnTypes":false,
-      // TODO: can I enable/disable inlayHints with a key mapping
-      // "python.analysis.inlayHints.callArgumentNames": "all",
-      "python.analysis.inlayHints.callArgumentNames": false,
-      "python.analysis.inlayHints.variableTypes": false,
-      "python.analysis.inlayHints.pytestParameters": false,
-// }}
-// ---------------------------------------------------------------
-
-// ---------------------------------------------------------------
-// Extension `VSCodeVim` settings
-// {
-"vim.easymotion": true,
-"vim.leader": ",",
-"vim.incsearch": true,
-"vim.useSystemClipboard": true,
-"vim.useCtrlKeys": true,
-"vim.hlsearch": true,
-"vim.highlightedyank.enable": true,
-"vim.highlightedyank.color": "rgba(255, 122, 66, 0.9)",
-
-// INSERT mode
-"vim.insertModeKeyBindings": [
-  {
-    "before": ["f", "j"],
-    "after": ["<ESC>", ":nohl"],
+  // This is a comment
+  "workbench.colorTheme": "Dracula",
+  "workbench.startupEditor": "none",
+  "editor.lineNumbers": "relative",
+  "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlightOnlyWhenFocus": false,
+  "editor.foldingStrategy": "auto",
+  // show document map on left
+  "editor.minimap.enabled": false,
+  // Wrap lines at column 79
+  "editor.wordWrap": "bounded",
+  // "editor.wordWrapColumn":79,
+  // "editor.fontFamily": "CaskaydiaCove NFM",
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontSize": 13,
+  "notebook.output.wordWrap": true,
+  "workbench.settings.editor": "json",
+  "terminal.integrated.fontSize": 12,
+  //"terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
+  // ---------------------------------------------------------------
+  // Extension `Rainbow CSV` settings
+  // {{
+  // Using the light mode
+  "indentRainbow.indicatorStyle": "light",
+  // we use a simple 1 pixel wide line
+  //"indentRainbow.lightIndicatorStyleLineWidth": 1,
+  // the same colors as above but more visible
+  "indentRainbow.colors": [
+    "rgba(243,144,188)",
+    "rgba(184, 224, 82)",
+    "rgba(90, 151, 206)",
+    "rgba(255, 205, 42)"
+  ],
+  // }}
+  // ---------------------------------------------------------------
+  // ---------------------------------------------------------------
+  // Extension `Pylance` settings
+  // {{
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.pytestParameters": true,
+  // }}
+  // ---------------------------------------------------------------
+  // ---------------------------------------------------------------
+  // Extension `VSCodeVim` settings
+  // {
+  "vim.easymotion": true,
+  "vim.leader": ",",
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(255, 122, 66, 0.9)",
+  // INSERT mode
+  "vim.insertModeKeyBindings": [
+    { 
+      "before": [ "f", "j" ],
+      "after": [ "<ESC>", ":nohl" ],
+    },
+    {
+      "before": [ "<leader>", "w" ],
+      "after": [ "<ESC>" ],
+      "commands": [ "workbench.action.files.save" ],
+      "silent": true, // comment this line if you want to have commands shown
+    },
+  ],
+  // VISUAL mode
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [ "f", "j" ],
+      "after": [ "<ESC>" ],
+    },
+    {
+      "before": [ "<leader>", "w" ],
+      "after": [ "<ESC>" ],
+      "commands": [ "workbench.action.files.save" ],
+      "silent": true, // comment this line if you want to have commands shown
+    },
+  ],
+  // NORMAL mode
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [ "<leader>", "d", "m" ],
+      "commands":[ "settings.cycle.toggleMiniMap" ]
+    },
+    {
+      "before": [ "<leader>", "d", "i" ],
+      "commands":[ "settings.cycle.inlayHints" ]
+    },
+    {
+      "before": [ "<leader>", "w" ],
+      "after": [ "<ESC>" ],
+      "commands": [ "workbench.action.files.save" ],
+      "silent": true, // comment this line if you want to have commands shown 
+    },
+    {
+      "before": [ "f", "j" ],
+      "after": [ "<ESC>" ],
+    },
+    {
+      "before": [ "<leader>", "f", "f" ],
+      "commands": [ "workbench.action.quickOpen" ]
+      // "silent": true, // comment this line if you want to have commands shown
+    },
+    {
+      "before": [ "<leader>", "c" ],
+      "commands": [ "workbench.action.closeActiveEditor" ],
+      "silent": true, // comment this line if you want to have commands shown
+    },
+    // leader-e to open explorer
+    // leader-git to open git
+    // leader-o to outline
+    // leader-g to open grep
+    // :: to show all commands
+    // remap Ctrl + Tab
+    // L to left of current buffer
+    {
+      "before": [ "L" ],
+      "commands": [ ":bnext" ],
+      "silent": true, // comment this line if you want to have commands shown
+    },
+    {
+      "before": [ "H" ],
+      "commands": [ ":bprev" ],
+      "silent": true, // comment this line if you want to have commands shown
+    },
+  ],
+  "vim.handleKeys": {
+    // Delegate these keys to be handled by VSCode instead of VSCodeVim
+    // "<C-d>": true,
+    "<C-s>": false,
+    "<C-e>": false,
+    "<C-b>": false,
+    // "<C-R>": false, // odfapen recent
+    // "<C-z>": false
   },
-  {
-    "before": ["<leader>", "w"],
-    "after": ["<ESC>"],
-    "commands": ["workbench.action.files.save"],
-    "silent": true, // comment this line if you want to have commands shown
-  },
-],
-
-// VISUAL mode
-"vim.visualModeKeyBindings": [
-  {
-    "before": ["f", "j"],
-    "after": ["<ESC>"],
-  },
-  {
-    "before": ["<leader>", "w"],
-    "after": ["<ESC>"],
-    "commands": ["workbench.action.files.save"],
-    "silent": true, // comment this line if you want to have commands shown
-  },
-],
-
-// NORMAL mode
-"vim.normalModeKeyBindings": [
-  {
-    "before": [":",":"],
-    "commands": ["workbench.action.showCommands"],
-  },
-  {
-    "before": ["<leader>", "w"],
-    "after": ["<ESC>"],
-    "commands": ["workbench.action.files.save"],
-    "silent": true, // comment this line if you want to have commands shown 
-  }, 
-  {
-    "before": ["K"],
-    "after": ["lineBreakInsert"],
-    // "commands": [""]
-    "silent": true, // comment this line if you want to have commands shown
-  },
-  {
-    "before": ["f", "j"],
-    "after": ["<ESC>"],
-  },
-  {
-    "before": ["<leader>", "f", "f"],
-    // "after": [""],
-    "commands": ["workbench.action.quickOpen"]
-    // "silent": true, // comment this line if you want to have commands shown
-  },
-  {
-    "before": ["<leader>", "c"],
-    // "after": [""],
-    "commands": ["workbench.action.closeActiveEditor"],
-    "silent": true, // comment this line if you want to have commands shown
-  },
-  // leader-e to open explorer
-  // leader-git to open git
-  // leader-o to outline
-  // leader-g to open grep
-  // :: to show all commands
-  // remap Ctrl + Tab
-  // L to left of current buffer
-  {
-    "before": ["L"],
-    // "after": [":bnext"],
-    "commands": [":bnext"],
-    "silent": true, // comment this line if you want to have commands shown
-  },
-  {
-    "before": ["H"],
-    // "after": [":bprev"],
-    "commands": [":bprev"],
-    "silent": true, // comment this line if you want to have commands shown
-  },
-  {
-    "before": ["<leader>","e"],
-    "after": ["Ctrl", "e"],
-    // "commands": [""]
-    "silent": true, // comment this line if you want to have commands shown
-  }
-  {
-    "before": ["<leader>", "p", "u", "l", "l"],
-    // "after": [""],
-    "commands": [
-      {"command": "git.pull"},
-    ]
-    "silent": true, // comment this line if you want to have commands shown
-  },
-  // H to right of current buffer
-],
-
-"vim.handleKeys": {
-  // Delegate these keys to be handled by VSCode instead of VSCodeVim
-  // "<C-d>": true,
-  "<C-s>": false,
-  "<C-e>": false,
-  // "<C-R>": false, // odfapen recent
-  // "<C-z>": false
-},
-
-// To improve performance,
+  // To improve performance,
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
-  }
-// ---------------------------------------------------------------
-
-// "tabnine.cloudHost": "https://aehtabnine.accenture.com",
-// "tabnine.experimentalAutoImports": true,
-
-"security.allowedUNCHosts": [
-  "wsl.localhost"
-],
-"[python]": {
-  "editor.defaultFormatter": "ms-python.black-formatter",
-},
-"remote.autoForwardPortsSource": "hybrid",
-// ---------------------------------------------------------------
-// JupyterNotebook
-// {{
-"notebook.lineNumbers": "on",
-// }}
-// ---------------------------------------------------------------
+  },
+  // ---------------------------------------------------------------
+  // "tabnine.cloudHost": "https://aehtabnine.accenture.com",
+  // "tabnine.experimentalAutoImports": true,
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  // ---------------------------------------------------------------
+  // JupyterNotebook
+  // {{
+  "notebook.lineNumbers": "on",
+  // }}
+  // ---------------------------------------------------------------
+  "settings.cycle": [
+    {
+      "id": "colorTheme", // must be unique
+      "overrideWorkspaceSettings": false,
+      "values": [
+        { "workbench.colorTheme": "Dracula" },
+        { "workbench.colorTheme": "Monokai Dimmed" },
+        { "workbench.colorTheme": "Monokai" },
+        { "workbench.colorTheme": "Solarized Dark" },
+      ]
+    },
+    {
+      "id": "inlayHints",
+      "values": [
+        {
+          "python.analysis.inlayHints.callArgumentNames": "off",
+          "python.analysis.inlayHints.functionReturnTypes": false,
+          "python.analysis.inlayHints.variableTypes": false,
+          "python.analysis.inlayHints.pytestParameters": false,
+        },
+        {
+          "python.analysis.inlayHints.callArgumentNames": "all",
+          "python.analysis.inlayHints.functionReturnTypes": true,
+          "python.analysis.inlayHints.variableTypes": true,
+          "python.analysis.inlayHints.pytestParameters": true,
+        }
+      ]
+    },
+    {
+      "id": "toggleMiniMap",
+      "values": [
+        {"editor.minimap.enabled": true},
+        {"editor.minimap.enabled": false},
+      ]
+    }
+  ],
 }
