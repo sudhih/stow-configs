@@ -1,6 +1,6 @@
 {
   // This is a comment
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Monokai",
   "workbench.startupEditor": "none",
   "editor.lineNumbers": "relative",
   "editor.renderLineHighlight": "all",
@@ -37,10 +37,10 @@
   // ---------------------------------------------------------------
   // Extension `Pylance` settings
   // {{
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.inlayHints.callArgumentNames": "all",
-  "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.inlayHints.functionReturnTypes": false,
+  "python.analysis.inlayHints.callArgumentNames": "off",
+  "python.analysis.inlayHints.variableTypes": false,
+  "python.analysis.inlayHints.pytestParameters": false,
   // }}
   // ---------------------------------------------------------------
   // ---------------------------------------------------------------
@@ -82,6 +82,29 @@
   ],
   // NORMAL mode
   "vim.normalModeKeyBindings": [
+    // Editor Window
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"],
+    },
+
+    // Git
+    {
+      "before": ["<leader>", "g", "g"],
+      "commands": ["workbench.view.scm"],
+    },
+
+    // Search
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.view.search"], // Search any string in the workspace
+    },
+    {
+      "before": [ "<leader>", "s", "f" ],
+      "commands": [ "workbench.action.quickOpen" ] // Search by fileaname
+    },
+
+    // Document / Buffer
     {
       "before": [ "<leader>", "d", "m" ],
       "commands":[ "settings.cycle.toggleMiniMap" ]
@@ -101,22 +124,10 @@
       "after": [ "<ESC>" ],
     },
     {
-      "before": [ "<leader>", "f", "f" ],
-      "commands": [ "workbench.action.quickOpen" ]
-      // "silent": true, // comment this line if you want to have commands shown
-    },
-    {
       "before": [ "<leader>", "c" ],
       "commands": [ "workbench.action.closeActiveEditor" ],
       "silent": true, // comment this line if you want to have commands shown
     },
-    // leader-e to open explorer
-    // leader-git to open git
-    // leader-o to outline
-    // leader-g to open grep
-    // :: to show all commands
-    // remap Ctrl + Tab
-    // L to left of current buffer
     {
       "before": [ "L" ],
       "commands": [ ":bnext" ],
@@ -127,6 +138,13 @@
       "commands": [ ":bprev" ],
       "silent": true, // comment this line if you want to have commands shown
     },
+    // leader-e to open explorer
+    // leader-git to open git
+    // leader-o to outline
+    // leader-g to open grep
+    // :: to show all commands
+    // remap Ctrl + Tab
+    // L to left of current buffer
   ],
   "vim.handleKeys": {
     // Delegate these keys to be handled by VSCode instead of VSCodeVim
