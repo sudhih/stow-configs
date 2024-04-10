@@ -21,5 +21,29 @@
     {
         "key": "ctrl+shift+t",
         "command": "settings.cycle.colorTheme",
+    },
+    
+    // Scroll Up & Down using Ctrl+n and Ctrl+p
+    //1. Code action menu
+    {
+        "key": "Ctrl+n",
+        "command": "selectNextCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "Ctrl+p",
+        "command": "selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
+    }, 
+    // 2. 
+    {
+        "key": "Ctrl+p",
+        "command": "editor.action.selectNextStickyScrollLine",
+        "when": "stickyScrollFocused"
+    },
+    {
+        "key": "Ctrl+n",
+        "command": "editor.action.selectNextStickyScrollLine",
+        "when": "stickyScrollFocused"
     }
 ]
