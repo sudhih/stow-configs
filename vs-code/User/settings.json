@@ -34,18 +34,20 @@
   ],
   // }}
   // ---------------------------------------------------------------
+  
+
   // ---------------------------------------------------------------
-  // Extension `Pylance` settings
-  // {{
+  // Extension `Pylance` {{
   "python.analysis.inlayHints.functionReturnTypes": false,
   "python.analysis.inlayHints.callArgumentNames": "off",
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.pytestParameters": false,
-  // }}
+  // Extension: Pylance }}
   // ---------------------------------------------------------------
+  
+
   // ---------------------------------------------------------------
-  // Extension `VSCodeVim` settings
-  // {
+  // Extension `VSCodeVim` {{
   "vim.easymotion": true,
   "vim.leader": ",",
   "vim.incsearch": true,
@@ -87,7 +89,21 @@
       "before": ["<leader>", "z"],
       "commands": ["workbench.action.toggleZenMode"],
     },
-
+    {
+      "before": ["<leader>", "o"],
+      "commands": [
+        {
+          "command": "outline.focus"
+        },
+        {
+          "command": "outline.expland"
+        }
+      ],
+    },
+    // {
+    //   "before": ["<leader>", "d", "d"],
+    //   "commands": ["settings.cycle.toggleDiagnostics"]
+    // },
     // Git
     {
       "before": ["<leader>", "g", "g"],
@@ -152,6 +168,7 @@
     "<C-s>": false,
     "<C-e>": false,
     "<C-b>": false,
+    "<C-t>": false,
     // "<C-R>": false, // odfapen recent
     // "<C-z>": false
   },
@@ -159,7 +176,10 @@
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1
   },
+  // Extension: VSCodeVim }}
   // ---------------------------------------------------------------
+  
+
   // "tabnine.cloudHost": "https://aehtabnine.accenture.com",
   // "tabnine.experimentalAutoImports": true,
   "security.allowedUNCHosts": [
@@ -169,12 +189,16 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
   },
   "remote.autoForwardPortsSource": "hybrid",
+  
+
   // ---------------------------------------------------------------
-  // JupyterNotebook
-  // {{
+  // Extension: Jupyter (jupter notebook) {{
   "notebook.lineNumbers": "on",
-  // }}
+  // Extension: Jupyter (jupyter notebook) }}
+
+
   // ---------------------------------------------------------------
+  // Extension: Settings Cycler {{
   "settings.cycle": [
     {
       "id": "colorTheme", // must be unique
@@ -209,6 +233,15 @@
         {"editor.minimap.enabled": true},
         {"editor.minimap.enabled": false},
       ]
-    }
+    },
+    // {
+    //   "id": "toggleDiagnostics",
+    //   "values": [
+    //     { "workbench.panel.markers.view.toggleVisibility": true},
+    //     { "workbench.panel.markers.view.toggleVisibility": false},
+    //   ]
+    // }
   ],
+// Extension: Settings Cycler }}
+// ------------------------------------------
 }
