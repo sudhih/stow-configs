@@ -1,6 +1,6 @@
 // place your key bindings in this file to override the defaults
 [
-    // Enable or disable inlayHints for Python files
+    // Toggle Activity Bar visibility
     {
         "key": "C-b",
         "when": "editorTextFocus",
@@ -16,6 +16,19 @@
             ]
         }
     },
+
+    // TODO: fix me,
+    // // expand is not working, only collapse works.
+    // {
+    //     "key": "+",
+    //     "when": "focusedView == outline && vim.mode == 'Normal'",
+    //     "command": "outline.expand"
+    // },
+    {
+        "key": "-",
+        "when": "focusedView == outline && vim.mode == 'Normal'",
+        "command": "outline.collapse"
+    }
 
     // Cycle through my preferred colorschemes
     {
@@ -36,14 +49,14 @@
         "when": "codeActionMenuVisible"
     }, 
     // 2. 
-    {
-        "key": "Ctrl+p",
-        "command": "editor.action.selectNextStickyScrollLine",
-        "when": "stickyScrollFocused"
-    },
-    {
-        "key": "Ctrl+n",
-        "command": "editor.action.selectNextStickyScrollLine",
-        "when": "stickyScrollFocused"
-    }
+    // {
+    //     "key": "Ctrl+p",
+    //     "command": "breadcrumbs.selectFocused",
+    //     "when": ""
+    // },
+    // {
+    //     "key": "Ctrl+n",
+    //     "command": "editor.action.selectNextStickyScrollLine",
+    //     "when": "stickyScrollFocused"
+    // }
 ]

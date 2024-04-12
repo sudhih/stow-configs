@@ -96,7 +96,13 @@
           "command": "outline.focus"
         },
         {
-          "command": "outline.expland"
+          "command": "outline.expand"
+        },
+        {
+          "command": "outline.sortByPosition",
+        },
+        {
+          "command": "outline.followCursor"
         }
       ],
     },
