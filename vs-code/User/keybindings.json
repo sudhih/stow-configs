@@ -17,6 +17,7 @@
         }
     },
 
+    // Outline expand and collapse
     // TODO: fix me,
     // // expand is not working, only collapse works.
     // {
@@ -24,11 +25,11 @@
     //     "when": "focusedView == outline && vim.mode == 'Normal'",
     //     "command": "outline.expand"
     // },
-    {
-        "key": "-",
-        "when": "focusedView == outline && vim.mode == 'Normal'",
-        "command": "outline.collapse"
-    }
+    // {
+    //     "key": "-",
+    //     "when": "focusedView == outline && vim.mode == 'Normal'",
+    //     "command": "outline.collapse"
+    // },
 
     // Cycle through my preferred colorschemes
     {
@@ -48,15 +49,93 @@
         "command": "selectPrevCodeAction",
         "when": "codeActionMenuVisible"
     }, 
-    // 2. 
-    // {
-    //     "key": "Ctrl+p",
-    //     "command": "breadcrumbs.selectFocused",
-    //     "when": ""
-    // },
-    // {
-    //     "key": "Ctrl+n",
-    //     "command": "editor.action.selectNextStickyScrollLine",
-    //     "when": "stickyScrollFocused"
-    // }
+
+    // 2. Command Pallete
+    {
+        "key": "Ctrl+p",
+        "command": "quickInput.previous",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
+    {
+        "key": "Ctrl+n",
+        "command": "quickInput.next",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+    },
+    
+    // Remove default Ctrl+n behaviour, b'se we're using 
+    // Ctrl+n to move to next item generally.
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+
+    
+    // 3. Breakcrumb {
+    {
+        "key": "ctrl+h",
+        "command": "breadcrumbs.focusPreviousWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "breadcrumbs.focusNextWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "list.collapse",
+        "when": "listFocus && treeElementCanCollapse && !inputFocus &&  !treestickyScrollFocused || listFocus && treeElementHasParent && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "list.expand",
+        "when": "listFocus && treeElementCanExpand && !inputFocus &&  !treestickyScrollFocused || listFocus && treeElementHasChild && !inputFocus && !treestickyScrollFocused"
+    },
+    // 3. Breadcrumb }
+    
+    // 4. Panel {
+
+    // 4.1 toggle maximize/minimize Panel irrespective of the tab within the  Panel
+    {
+        "key": "ctrl+m",
+        "when": "panelFocus",
+        "command": "workbench.action.toggleMaximizedPanel"
+
+    },
+
+    // 4.2 easily switch tabs inside Panel
+    {
+        "key": "ctrl+1",
+        "when": "panelFocus && workbench.panel.markers.view.active",
+        "command": "workbench.actions.view.problems"
+
+    },    {
+        "key": "ctrl+2",
+        "when": "panelFocus && workbench.panel.output.active",
+        "command": "workbench.action.output.toggleOutput"
+
+    },
+    {
+        "key": "ctrl+3",
+        "when": "panelFocus && workbench.panel.repl.view.active",
+        "command": "workbench.debug.action.toggleRepl"
+
+    },
+    {
+        "key": "ctrl+4",
+        "when": "panelFocus && terminal.active",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    // 4. Panel }
+
 ]

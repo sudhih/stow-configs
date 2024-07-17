@@ -1,6 +1,6 @@
 {
   // This is a comment
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.startupEditor": "none",
   "editor.lineNumbers": "relative",
   "editor.renderLineHighlight": "all",
@@ -8,8 +8,6 @@
   "editor.foldingStrategy": "auto",
   // show document map on left
   "editor.minimap.enabled": false,
-  // Wrap lines at column 79
-  "editor.wordWrap": "bounded",
   // "editor.wordWrapColumn":79,
   // "editor.fontFamily": "CaskaydiaCove NFM",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
@@ -59,7 +57,7 @@
   // INSERT mode
   "vim.insertModeKeyBindings": [
     { 
-      "before": [ "f", "j" ],
+      "before": [ "<leader>", "e" ],
       "after": [ "<ESC>", ":nohl" ],
     },
     {
@@ -110,9 +108,15 @@
     //   "before": ["<leader>", "d", "d"],
     //   "commands": ["settings.cycle.toggleDiagnostics"]
     // },
+    
+    // File Explorer
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
     // Git
     {
-      "before": ["<leader>", "g", "g"],
+      "before": ["<leader>", "g"],
       "commands": ["workbench.view.scm"],
     },
 
@@ -195,11 +199,6 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
   },
   "remote.autoForwardPortsSource": "hybrid",
-  
-
-  // ---------------------------------------------------------------
-  // Extension: Jupyter (jupter notebook) {{
-  "notebook.lineNumbers": "on",
   // Extension: Jupyter (jupyter notebook) }}
 
 
@@ -210,7 +209,9 @@
       "id": "colorTheme", // must be unique
       "overrideWorkspaceSettings": false,
       "values": [
-        { "workbench.colorTheme": "Dracula" },
+        { "workbench.colorTheme": "Night Owl" },
+        { "workbench.colorTheme": "Tokyo Night" },
+        { "workbench.colorTheme": "Tokyo Night Storm" },
         { "workbench.colorTheme": "Monokai Dimmed" },
         { "workbench.colorTheme": "Monokai" },
         { "workbench.colorTheme": "Solarized Dark" },
@@ -248,6 +249,25 @@
     //   ]
     // }
   ],
+  "git.autofetch": true,
+  "notebook.lineNumbers": "on",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
 // Extension: Settings Cycler }}
 // ------------------------------------------
+
+
+"workbench.colorCustomizations": {
+  "[Night Owl]": {
+    "activityBar.background": "#000C1D",
+    "activityBar.border": "#102a44",
+    "editorGroup.border": "#102a44",
+    "sideBar.background": "#001122",
+    "sideBar.border": "#102a44",
+    "sideBar.foreground": "#8BADC1"
+  },
+},
+"editor.rulers": [
+  80,
+],
+"editor.wordWrap": "bounded"
 }
