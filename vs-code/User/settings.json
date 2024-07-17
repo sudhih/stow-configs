@@ -175,10 +175,11 @@
   "vim.handleKeys": {
     // Delegate these keys to be handled by VSCode instead of VSCodeVim
     // "<C-d>": true,
-    "<C-s>": false,
+    "<C-s>": false, // save files
     "<C-e>": false,
-    "<C-b>": false,
+    "<C-b>": false, /// toggle activity bar visibiity
     "<C-t>": false,
+    "<C-j>": false, // toggle Panel visibility
     // "<C-R>": false, // odfapen recent
     // "<C-z>": false
   },
