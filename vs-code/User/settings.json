@@ -104,6 +104,8 @@
         }
       ],
     },
+
+    // List opened buffers/editors
     {
       "before": ["<leader>", "<leader>"],
       // "after": [""],
@@ -117,12 +119,12 @@
     
     // File Explorer
     {
-      "before": ["<leader>", "e"],
+      "before": ["<leader>", "e", "e"],
       "commands": ["workbench.view.explorer"]
     },
     // Git
     {
-      "before": ["<leader>", "g"],
+      "before": ["<leader>", "g", "g"],
       "commands": ["workbench.view.scm"],
     },
 
@@ -152,7 +154,7 @@
       "silent": true, // comment this line if you want to have commands shown 
     },
     {
-      "before": [ "f", "j" ],
+      "before": [ "<leader>", "e" ],
       "after": [ "<ESC>" ],
     },
     {
@@ -170,13 +172,7 @@
       "commands": [ ":bprev" ],
       "silent": true, // comment this line if you want to have commands shown
     },
-    // leader-e to open explorer
-    // leader-git to open git
-    // leader-o to outline
-    // leader-g to open grep
     // :: to show all commands
-    // remap Ctrl + Tab
-    // L to left of current buffer
   ],
   "vim.handleKeys": {
     // Delegate these keys to be handled by VSCode instead of VSCodeVim
@@ -197,8 +193,6 @@
   // ---------------------------------------------------------------
   
 
-  // "tabnine.cloudHost": "https://aehtabnine.accenture.com",
-  // "tabnine.experimentalAutoImports": true,
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
@@ -273,6 +267,8 @@
     "sideBar.foreground": "#8BADC1"
   },
 },
+
+// This is same as `:set colorcolumn=80` in Vim
 "editor.rulers": [
   80,
 ],

@@ -150,4 +150,38 @@
     },
     // 4. Panel }
 
+
+    // LSP
+    // NOTE: VSCode doesn't understand <leader> from Vim. Hence have to settle for the possible alternatives: Ctrl, Shift, Alt
+    
+    // 1. Hover
+    {
+        "key": "shift+K",
+        "when": "inputFocus && vim.mode == 'Normal'",
+        "command": "editor.action.showHover"
+    },
+
+    // 2. Go to Definition
+    // `gd` works by default 
+
+    // 3. Open definition to the side
+    {
+        "key": "ctrl+k",
+        "when": "vim.mode == 'Normal' && editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor",
+        "command": "editor.action.revealDefinitionAside"
+    },
+
+    // 4. Peek definition
+    {
+        "key": "ctrl+shift+k",
+        "when": "vim.mode == 'Normal' && editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor",
+        "command": "editor.action.peekDefinition"
+    },
+
+    // 5. Go to references
+    {
+        "key": "ctrl+r",
+        "when": "vim.mode == 'Normal' && editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEdito",
+        "command": "editor.action.goToReferences"
+    },
 ]
