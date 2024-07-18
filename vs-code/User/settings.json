@@ -104,6 +104,12 @@
         }
       ],
     },
+    {
+      "before": ["<leader>", "<leader>"],
+      // "after": [""],
+      "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditor"],
+      "silent": true, // comment this line if you want to have commands shown
+    },
     // {
     //   "before": ["<leader>", "d", "d"],
     //   "commands": ["settings.cycle.toggleDiagnostics"]
