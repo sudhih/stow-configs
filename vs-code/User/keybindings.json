@@ -136,6 +136,18 @@
         "when": "panelFocus && terminal.active",
         "command": "workbench.action.terminal.toggleTerminal"
     },
+
+    // 4.3 Open new terminal & split terminal
+    {
+        "key": "ctrl+t",
+        "when": "terminalFocus && terminalProcessSupported",
+        "command": "workbench.action.terminal.split"
+    },
+    {
+        "key": "ctrl+n",
+        "when": "terminalFocus && terminalProcessSupported",
+        "command": "workbench.action.terminal.new"
+    },
     // 4. Panel }
 
 ]
