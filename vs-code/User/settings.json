@@ -182,7 +182,7 @@
     "<C-b>": false, /// toggle activity bar visibiity
     "<C-t>": false,
     "<C-j>": false, // toggle Panel visibility
-    "<C-K>": false, // many commands in VSCode starts with <C-k>,
+    "<C-k>": false, // many commands in VSCode starts with <C-k>,
     // "<C-R>": false, // odfapen recent
     // "<C-z>": false
   },
