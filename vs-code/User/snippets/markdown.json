@@ -7,10 +7,17 @@
 		"description": "Checkbox",
 	},
 	"underline":{
-		"prefix": ["ul",]
+		"prefix": ["ul",],
 		"body": [
 			"<u>$1</u>"
 		],
 		"description": "Surround text with underline",
+	},
+	"TODO item":{
+		"prefix": ["task",],
+		"body": [
+			"- [ ] $1"
+		],
+		"description": "Text to be show in Intellisense",
 	}
 }
