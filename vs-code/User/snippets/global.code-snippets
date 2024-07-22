@@ -3,12 +3,12 @@
 		"prefix": ["snip"],
 		"body": [
 			"\"${1:Snippet-name shown in Intellisence if NO  'Description'}\":{",
-			"\t\"prefix\": [\"${2:Trigger-word. Type: array|str}\",]",
+			"\t\"prefix\": [\"${2:Trigger-word. Type: array|str}\",],",
 			"\t\"body\": [",
 			"\t\t\"${3:What you want after trigger-word suggestion of Intellisense is selected ...???\n\t\tFor multi-line text, have each line of the multi-line text as a separate item in this array.\n\t\tIf the resulting-text contains double-quote escape it using back-slash}\"",
 			"\t],",
 			"\t\"description\": \"${4:Text to be show in Intellisense}\",",
-			"}"
+			"},"
 		],
 		//"prefix": "${0: trigger word type: array|string }",
 
