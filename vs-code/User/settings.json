@@ -278,5 +278,15 @@
 "markdown-preview-enhanced.revealjsTheme": "night.css",
 "markdown-preview-enhanced.codeBlockTheme": "okaidia.css",
 "markdown-preview-enhanced.previewTheme": "none.css",
-"markdown-preview-enhanced.enablePreviewZenMode": true
+"markdown-preview-enhanced.enablePreviewZenMode": true,
+"[markdown]": {
+  "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.defaultFormatter": "vscode.markdown-language-features",
+  "editor.formatOnSave": true
+}
 }
