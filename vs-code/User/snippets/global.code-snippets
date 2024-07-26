@@ -12,5 +12,12 @@
 		],
 		//"prefix": "${0: trigger word type: array|string }",
 
-	}
+	},
+	"TODO label":{
+		"prefix": ["todo",],
+		"body": [
+			"# TODO(sudhir): $1"
+		],
+		"description": "Text to be show in Intellisense",
+	},
 }
