@@ -54,6 +54,7 @@
   "vim.hlsearch": true,
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.color": "rgba(255, 122, 66, 0.9)",
+  // "vim.smartRelativeLine": true,
   // INSERT mode
   "vim.insertModeKeyBindings": [
     { 
@@ -158,7 +159,7 @@
       "after": [ "<ESC>" ],
     },
     {
-      "before": [ "<leader>", "c" ],
+      "before": [ "<leader>", "b", "d" ],
       "commands": [ "workbench.action.closeActiveEditor" ],
       "silent": true, // comment this line if you want to have commands shown
     },
@@ -273,5 +274,9 @@
 "editor.rulers": [
   80,
 ],
-"editor.wordWrap": "bounded"
+"editor.wordWrap": "bounded",
+"markdown-preview-enhanced.revealjsTheme": "night.css",
+"markdown-preview-enhanced.codeBlockTheme": "okaidia.css",
+"markdown-preview-enhanced.previewTheme": "none.css",
+"markdown-preview-enhanced.enablePreviewZenMode": true
 }
