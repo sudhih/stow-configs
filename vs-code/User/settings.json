@@ -279,7 +279,7 @@
     "editorLineNumber.activeForeground":"#e48935",
     "tab.activeBorder":"#e48935",
     "panelTitle.activeForeground":"#5ef308",
-    "panelSection.border":"#5ef308"
+    "editorIndentGuide.activeBackground1":"#60aaa0"
   }
 },
 
@@ -290,14 +290,14 @@
 
 // Filetype specifics
 "[markdown]": {
-  "editor.tabSize": 2,
+  // "editor.tabSize": 2,
   "editor.quickSuggestions": { // enable auto suggestions
     "other": "on",
     "comments": "on",
     "strings": "on"
   },
-  "editor.defaultFormatter": "vscode.markdown-language-features",
-  "editor.formatOnSave": true
+  // "editor.defaultFormatter": "vscode.markdown-language-features",
+  // "editor.formatOnSave": true
 },
 
 // Notebook
