@@ -1,9 +1,12 @@
 {
-  // This is a comment
+  // Workbench
   "workbench.colorTheme": "Tokyo Night",
   "workbench.startupEditor": "none",
+  "workbench.activityBar.location": "top",
+  "workbench.settings.editor": "json",
+  
+  // Editor
   "editor.lineNumbers": "relative",
-  "editor.renderLineHighlight": "all",
   "editor.renderLineHighlightOnlyWhenFocus": false,
   "editor.foldingStrategy": "auto",
   // show document map on left
@@ -12,10 +15,10 @@
   // "editor.fontFamily": "CaskaydiaCove NFM",
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.fontSize": 13,
-  "notebook.output.wordWrap": true,
-  "workbench.settings.editor": "json",
-  "terminal.integrated.fontSize": 12,
-  //"terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
+  // This is same as `:set colorcolumn=80` in Vim
+  "editor.rulers": [ 80, ],
+  "editor.wordWrap": "bounded",
+  // "terminal.external.windowsExec": "C:\\Program Files\\Alacritty\\alacritty.exe",
   // ---------------------------------------------------------------
   // Extension `Rainbow CSV` settings
   // {{
@@ -252,11 +255,15 @@
     //   ]
     // }
   ],
+  // Extension: Settings Cycler }}
+  // ------------------------------------------
+
+  // Git
   "git.autofetch": true,
-  "notebook.lineNumbers": "on",
+
+  // Terminal
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-// Extension: Settings Cycler }}
-// ------------------------------------------
+  "terminal.integrated.fontSize": 12,
 
 
 "workbench.colorCustomizations": {
@@ -268,25 +275,37 @@
     "sideBar.border": "#102a44",
     "sideBar.foreground": "#8BADC1"
   },
+  "[Tokyo Night]": {
+    "editorLineNumber.activeForeground":"#e48935",
+    "tab.activeBorder":"#e48935",
+    "panelTitle.activeForeground":"#5ef308",
+    "panelSection.border":"#5ef308"
+  }
 },
 
-// This is same as `:set colorcolumn=80` in Vim
-"editor.rulers": [
-  80,
-],
-"editor.wordWrap": "bounded",
 "markdown-preview-enhanced.revealjsTheme": "night.css",
 "markdown-preview-enhanced.codeBlockTheme": "okaidia.css",
 "markdown-preview-enhanced.previewTheme": "none.css",
 "markdown-preview-enhanced.enablePreviewZenMode": true,
+
+// Filetype specifics
 "[markdown]": {
   "editor.tabSize": 2,
-  "editor.quickSuggestions": {
+  "editor.quickSuggestions": { // enable auto suggestions
     "other": "on",
     "comments": "on",
     "strings": "on"
   },
   "editor.defaultFormatter": "vscode.markdown-language-features",
   "editor.formatOnSave": true
-}
+},
+
+// Notebook
+"notebook.cellToolbarLocation": {
+  "default": "right",
+  "jupyter-notebook": "right"
+},
+"notebook.output.wordWrap": true,
+"notebook.showFoldingControls": "always",
+"notebook.lineNumbers": "on",
 }
