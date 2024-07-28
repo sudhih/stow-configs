@@ -163,6 +163,19 @@
         "when": "vim.mode == 'Normal' && editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor",
         "command": "editor.action.peekDefinition"
     },
+    // When peek definition window is open, move cursor into the peek-definition
+    // window, so that you can navigate, edit etc.
+    //https://stackoverflow.com/questions/64216737/vscode-keyboard-shortcut-to-navigate-in-the-peek-windows
+    {
+        "key": "alt+g",          // whatever you want here
+        "command": "togglePeekWidgetFocus",
+        "when": "inReferenceSearchEditor || referenceSearchVisible"
+    },
+    // {
+    //     "key": "ctrl+k f2",
+    //     "command": "-togglePeekWidgetFocus",
+    //     "when": "inReferenceSearchEditor || referenceSearchVisible"
+    // }
 
     // 5. Go to references
     {
