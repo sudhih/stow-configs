@@ -21,10 +21,22 @@
 		"description": "Text to be show in Intellisense",
 	},
 	"Markdown link":{
-		"prefix": ["link",]
+		"prefix": ["link",],
 		"body": [
 			"[${1:alt-link-text}](${2:actual-link})"
 		],
 		"description": "Create markdown link",
 	},
+
+	// mermaid
+	"mermaid block":{
+		"prefix": ["mermaid",],
+		"body": [
+			"```mermaid",
+			"${1:trigger examples with `examples`}",
+			"```",
+		],
+		"description": "mermaid code block",
+	},
+
 }

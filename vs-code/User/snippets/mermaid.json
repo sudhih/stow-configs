@@ -1,0 +1,39 @@
+{
+	"mermaid classdiagram example":{
+		"prefix": ["example-class-diagram",],
+		"body": [
+			"---\ntitle: Example Class Diagrams\n---\n",
+			"classDiagram",
+			"\t%% Simple class with private, public, static properties",
+			"\tclass Sample {",
+			"\t\t-int _im_private_attr",
+			"\t\t+str im_public_attr",
+			"\t\t+im_static_method() none $",
+			"\t\t+im_public_method() str",
+			"\t\t+im_public_method() union~list, none~",
+			"\t}\n",
+
+			"\t%% Example Abstract class",
+			"\tclass SecretsBaseProvider {",
+			"\t\t<<Abstract>>",
+			"\t\t+load() None",
+			"\t}\n"
+			
+			"\t%% Example relationships between classes",
+			"\tTitle -- Genre: is associated with",
+			"\tTitle *-- Season: has",
+			"\tTitle *-- Review: has",
+			"\tTitle o-- Actor: features",
+			"\tTV_Show --|> Title: implements",
+			"\tFilm --|> Title: implements",
+			"\tShort --|> Title: implements",
+			"\tViewer --> Title: watches",
+			"\tSeason *-- Review: has",
+			"\tSeason *-- Episode: contains",
+			"\tEpisode *-- Review: has\n\n$1",
+		],
+		"description": "mermaid classdiagram example for reference",
+	},
+
+
+}
