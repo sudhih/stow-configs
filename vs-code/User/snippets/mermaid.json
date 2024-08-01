@@ -17,7 +17,7 @@
 			"\tclass SecretsBaseProvider {",
 			"\t\t<<Abstract>>",
 			"\t\t+load() None",
-			"\t}\n"
+			"\t}\n",
 			
 			"\t%% Example relationships between classes",
 			"\tTitle -- Genre: is associated with",
@@ -31,9 +31,96 @@
 			"\tSeason *-- Review: has",
 			"\tSeason *-- Episode: contains",
 			"\tEpisode *-- Review: has\n\n$1",
+			"%% NOTE: YOU CAN'T CREATE MORE THAN ONE `classDiagram` inside this mermaid block. You can keep this example for reference until you create your own & delete example code"
 		],
-		"description": "mermaid classdiagram example for reference",
+		"description": "mermaid classDiagram example for reference",
 	},
 
+	"Mermaid title":{
+		"prefix": ["title",],
+		"body": [
+			"---\ntitle: $1\n---\n\n$2"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid classDiagram":{
+		"prefix": ["class-diagram-block",],
+		"body": [
+			"classDiagram\n\t$1"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+	"Mermaid Abstract ClassDiagram code":{
+		"prefix": ["abstract-class",],
+		"body": [
+			"class ${1:UrClassName}{\n\t<<Abstract>>\n\t${2:UrClassBody}\n}"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid ClassDiagram code":{
+		"prefix": ["class",],
+		"body": [
+			"class ${1:UrClassName} {\n\t${2:UrClassBody}\n}"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid class private attribute":{
+		"prefix": ["private-attr","pa"],
+		"body": [
+			"-${1:variable-type}: ${2:variable-name}"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid class public attribute":{
+		"prefix": ["public-attr",],
+		"body": [
+			"+${1:variable-type} ${2:variable-name}"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+	
+	"Mermaid class public method":{
+		"prefix": ["public-method",],
+		"body": [
+			"+${1:method-name}() ${2:return-type}"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+	
+	"Mermaid class private method":{
+		"prefix": ["private-method",],
+		"body": [
+			"-${1:method-name}(): ${2:return-type}"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid Inherits relationship":{
+		"prefix": ["inherits"],
+		"body": [
+			"${1:base-class} <|-- ${2:child-class} : inherits"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid Implements relationship":{
+		"prefix": ["implements"],
+		"body": [
+			"${1:base-class} <|-- ${2:child-class} : implements"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+	
+	"Mermaid Has relationship":{
+		"prefix": ["has"],
+		"body": [
+			"${1:base-class} *|-- ${2:child-class} : has"
+		],
+		"description": "Text to be show in Intellisense",
+	},
 
 }
