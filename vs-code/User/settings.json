@@ -113,7 +113,7 @@
     {
       "before": ["<leader>", "<leader>"],
       // "after": [""],
-      "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditor"],
+      "commands": ["workbench.action.showAllEditors"],
       "silent": true, // comment this line if you want to have commands shown
     },
     // {
@@ -285,7 +285,7 @@
 
 "markdown-preview-enhanced.revealjsTheme": "night.css",
 "markdown-preview-enhanced.codeBlockTheme": "okaidia.css",
-"markdown-preview-enhanced.previewTheme": "none.css",
+"markdown-preview-enhanced.previewTheme": "one-light.css",
 "markdown-preview-enhanced.enablePreviewZenMode": true,
 
 // Filetype specifics
