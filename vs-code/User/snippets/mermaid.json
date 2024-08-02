@@ -118,7 +118,15 @@
 	"Mermaid Has relationship":{
 		"prefix": ["has"],
 		"body": [
-			"${1:base-class} *|-- ${2:child-class} : has"
+			"${1:base-class} *-- ${2:child-class} : has"
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Mermaid note for class":{
+		"prefix": ["note-class",],
+		"body": [
+			"note for ${1:ClassName} \"${2:Note for the class}\""
 		],
 		"description": "Text to be show in Intellisense",
 	},
