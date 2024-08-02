@@ -16,7 +16,7 @@
 	"TODO label":{
 		"prefix": ["todo",],
 		"body": [
-			"# TODO(sudhir): $1"
+			"# TODO(sudhir): "
 		],
 		"description": "Text to be show in Intellisense",
 	},
