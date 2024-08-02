@@ -16,7 +16,7 @@
 	"TODO item":{
 		"prefix": ["task",],
 		"body": [
-			"- [ ] ${1: Describe your TODO item}"
+			"- [ ] "
 		],
 		"description": "Text to be show in Intellisense",
 	},
@@ -39,4 +39,43 @@
 		"description": "mermaid code block",
 	},
 
+	"Markdown Heading-1":{
+		"prefix": ["h1",],
+		"body": [
+			"# "
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Markdown Heading-2":{
+		"prefix": ["h2",],
+		"body": [
+			"## "
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Markdown Heading-3":{
+		"prefix": ["h3",],
+		"body": [
+			"### "
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Markdown Heading-4":{
+		"prefix": ["h4",],
+		"body": [
+			"#### "
+		],
+		"description": "Text to be show in Intellisense",
+	},
+
+	"Markdown Heading-5":{
+		"prefix": ["h5",],
+		"body": [
+			"##### "
+		],
+		"description": "Text to be show in Intellisense",
+	},
 }
