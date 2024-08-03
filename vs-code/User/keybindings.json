@@ -101,24 +101,24 @@
 
     // 4.2 easily switch tabs inside Panel
     {
-        "key": "ctrl+1",
+        "key": "ctrl+shift+1",
         "when": "panelFocus && workbench.panel.markers.view.active",
         "command": "workbench.actions.view.problems"
 
     },    {
-        "key": "ctrl+2",
+        "key": "ctrl+shift+2",
         "when": "panelFocus && workbench.panel.output.active",
         "command": "workbench.action.output.toggleOutput"
 
     },
     {
-        "key": "ctrl+3",
+        "key": "ctrl+shift+3",
         "when": "panelFocus && workbench.panel.repl.view.active",
         "command": "workbench.debug.action.toggleRepl"
 
     },
     {
-        "key": "ctrl+4",
+        "key": "ctrl+shift+4",
         "when": "panelFocus && terminal.active",
         "command": "workbench.action.terminal.toggleTerminal"
     },
