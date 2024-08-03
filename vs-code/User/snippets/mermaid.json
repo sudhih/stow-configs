@@ -62,7 +62,7 @@
 	"Mermaid ClassDiagram code":{
 		"prefix": ["class",],
 		"body": [
-			"class ${1:UrClassName} {\n\t${2:UrClassBody}\n}"
+			"class ${1:UrClassName} {\n\t$2\n}"
 		],
 		"description": "Text to be show in Intellisense",
 	},
